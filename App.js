@@ -26,21 +26,7 @@ const App = () => {
 
     <SafeAreaView style={Styling.MainContainer} >
       <Header/>
-      {/* <ScrollView showsVerticalScrollIndicator={false} >
-         <UserProfile/>
-        <Component1 />
-        <Component2/>
-        <Component3/>
-        <SubComponent3/>
-        <View style={{borderColor:"whitesmoke",borderBottomWidth:10,borderTopWidth:10 ,marginTop:10,}}>
-         <PopularBrands/></View>
-        <View style={{borderColor:"whitesmoke",borderBottomWidth:10 ,marginTop:10,}}>
-         <PopularCurations/></View>
-         <View style={{borderColor:"whitesmoke",borderBottomWidth:10 ,marginTop:10,}}>
-         <Instamart/></View>
-       
-
-      </ScrollView> */}
+      
       <NavigationContainer>
       <Footer/>
       </NavigationContainer>
