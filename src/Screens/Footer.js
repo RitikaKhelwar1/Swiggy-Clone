@@ -10,6 +10,7 @@ import Search from './Search'
 import Food from './Food'
 import Account from './Account'
 import Cart from './Cart'
+import { BottomTabBarHeightContext } from '@react-navigation/bottom-tabs';
 
 const Tab = createBottomTabNavigator();
 
