@@ -23,12 +23,12 @@ function Account() {
 
       {/* user details */}
       
-      <View style={{flexDirection:"row"}}>
+      <View style={{flexDirection:"row",borderBottomWidth:2,borderBottomColor:"black",paddingVertical:25,}}>
       {/* user details */}
 
-        <View style={{flex:0.7}}>
+        <View style={{flex:0.7,}}>
         <Text style={Styling.font} >{UserDetails[0].UserName.toUpperCase()}</Text>
-        <Text>+91-{UserDetails[0].PhoneNumber} . {UserDetails[0].Email}</Text>
+        <Text style={{marginLeft:10,marginTop:5}} >+91-{UserDetails[0].PhoneNumber} . {UserDetails[0].Email}</Text>
         </View>
 
         {/* button to edit user details */}
