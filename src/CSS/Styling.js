@@ -67,6 +67,7 @@ export default StyleSheet.create({
         color: "midnightblue",
         fontSize: 17,
         marginLeft: 10,
+        
     },
     headerLogo: {
         height: 21,
