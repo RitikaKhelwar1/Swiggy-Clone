@@ -9,29 +9,28 @@ import Instamart from './Instamart';
 import Search from './Search'
 import Food from './Food'
 import Account from './Account'
+import Cart from './Cart'
 
 const Tab = createBottomTabNavigator();
 
 function Footer() {
   return (
-
-    <Tab.Navigator  >
-      <Tab.Screen name= "Swiggyyy" component={SwiggyHome} options={{ 
-        headerShown:false
-      }}/>
-      <Tab.Screen name="Food" component={Food} options={{ 
-        headerShown:false
-      }} />
-      <Tab.Screen name='InstaMart' component={Instamart} options={{ 
+    
+    <Tab.Navigator >
+      <Tab.Screen name= "Swiggy" component={SwiggyHome} options={{ 
         headerShown:false
       }}/>
       <Tab.Screen name="Search" component={Search} options={{ 
+        headerShown:false
+      }}/>
+      <Tab.Screen name="Cart" component={Cart} options={{ 
         headerShown:false
       }}/>
       <Tab.Screen name="Account" component={Account} options={{ 
         headerShown:false
       }}/>
     </Tab.Navigator>
+   
   )
 }
 

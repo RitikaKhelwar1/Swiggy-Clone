@@ -25,11 +25,11 @@ const App = () => {
   return (
 
     <SafeAreaView style={Styling.MainContainer} >
-      <Header/>
       
       <NavigationContainer>
       <Footer/>
       </NavigationContainer>
+      
       
     </SafeAreaView>
 

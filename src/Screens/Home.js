@@ -7,11 +7,13 @@ import PopularBrands from './PopularBrands'
 import PopularCurations from './PopularCurations'
 import Instamart from './Instamart'
 import Component1 from './component1'
+import Header from './header'
 
 function Home() {
   return (
+    <View>
+         <Header/>
   <ScrollView showsVerticalScrollIndicator={false} >
-         
         <Component1 />
         <Component2/>
         <Component3/>
@@ -25,6 +27,7 @@ function Home() {
        
 
       </ScrollView> 
+      </View>
   
   )
 }
