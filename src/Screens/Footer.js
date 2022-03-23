@@ -14,28 +14,36 @@ function Footer() {
   return (
     
     <Tab.Navigator >
+      {/* <--------------------Swiggy Home Screen---------------------------> */}
       <Tab.Screen name= "Swiggy" component={SwiggyHome} options={{ 
         headerShown:false,
+        tabBarHideOnKeyboard:true,
         tabBarIcon:({focused})=>(
           <Image source={require('../Images/Swiggy.png')} style={{height:25,width:25,tintColor:focused?'black':'grey'}} ></Image>
         )
       }}/>
+      {/* <----------------------Search Tab Screen-------------------------> */}
       <Tab.Screen name="Search" component={Search} options={{ 
         headerShown:false,
+        tabBarHideOnKeyboard:true,
         tabBarIcon:({focused})=>(
           <Image source={require('../Images/Search.png')} style={{height:25,width:25,tintColor:focused?'black':'grey'}} ></Image>
         )
       }}/>
+      {/* <-----------------------Cart Tab Screen-------------------------> */}
       <Tab.Screen name="Cart" component={Cart} options={{ 
         headerShown:false,
+        tabBarHideOnKeyboard:true,
         tabBarIcon:({focused})=>(
           <Image source={require('../Images/bag.png')} style={{height:20,width:20,tintColor:focused?'black':'grey'}} ></Image>
         ),
         
         
       }}/>
+      {/* <--------------------Account Tab Screen--------------------------> */}
       <Tab.Screen name="Account" component={AccountScreen} options={{ 
         headerShown:false,
+        tabBarHideOnKeyboard:true,
         tabBarIcon:({focused})=>(
           <Image source={require('../Images/user.png')} style={{height:17,width:17,tintColor:focused?'black':'grey'}} ></Image>
         )

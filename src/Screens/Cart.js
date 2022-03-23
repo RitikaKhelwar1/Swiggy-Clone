@@ -1,6 +1,6 @@
 import React from 'react'
 import {Text,View,Image,TouchableOpacity} from 'react-native'
-
+// import DropdownMenu from 'react-native-dropdown-menu'
 import Styling from '../CSS/Styling'
 
 
@@ -14,8 +14,7 @@ function Cart() {
   <TouchableOpacity><View style={{margin:25,borderColor:"orange",borderWidth:1}}>
       <Text style={{margin:10,color:"orange",marginHorizontal:15,fontWeight:"bold"}} >BROWSE RESTAURANTS</Text>
   </View></TouchableOpacity>
-
-   </View>
+  </View>
   )
 }
 

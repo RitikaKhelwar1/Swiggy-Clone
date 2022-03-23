@@ -1,9 +1,8 @@
 import React from 'react'
 import {Text,View,Image,Button,TextInput} from 'react-native'
 import Styling from '../CSS/Styling'
-import SwiggyHome from './Home'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
-import { NavigationContainer } from '@react-navigation/native'
+
 
 function EditDetails(){
   return(
@@ -19,7 +18,7 @@ function EditDetails(){
 }
 
 
-// function for user details-------------------------->
+// function for ACCOUNT screen-------------------------->
 
 
 function AccountStackScreen({navigation}) {
@@ -52,6 +51,15 @@ function AccountStackScreen({navigation}) {
         </View>
 
       </View>
+
+    {/* <----------------DropDown List--------------> */}
+
+    <View>
+
+
+    </View>
+
+
     </View>
   )
 }
@@ -66,7 +74,7 @@ const AccountStack = createNativeStackNavigator();
 function AccountScreen() {
   return (
     <AccountStack.Navigator>
-      <AccountStack.Screen name="Account" component={AccountStackScreen} options={{headerShown:false}} />
+      <AccountStack.Screen name="AccountScreen" component={AccountStackScreen} options={{headerShown:false}} />
       <AccountStack.Screen name="EditDetails" component={EditDetails} />
     </AccountStack.Navigator>
   );
