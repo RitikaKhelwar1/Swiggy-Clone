@@ -8,19 +8,21 @@ import { NavigationContainer } from '@react-navigation/native'
 function EditDetails(){
   return(
     <View>
-    <TextInput placeholder='enter your name'></TextInput>
-    <TextInput placeholder='enter your phone no.'></TextInput>
-    <TextInput placeholder='enter your e-mail address'></TextInput>
+    <TextInput placeholder='enter your name' style={{borderWidth:1,borderColor:"black",marginBottom:10,borderRadius:5}}></TextInput>
+    <TextInput placeholder='enter your phone no.'style={{borderWidth:1,borderColor:"black",marginBottom:10,borderRadius:5}}></TextInput>
+    <TextInput placeholder='enter your e-mail address'style={{borderWidth:1,borderColor:"black",marginBottom:10,borderRadius:5}}></TextInput>
+    <View style={{justifyContent:"center",alignItems:"center",marginTop:20}}>
+    <Button title='UPDATE' color='orange'></Button>
+    </View>
     </View>
   )
 }
 
-const AccountStack = createNativeStackNavigator();
 
 // function for user details-------------------------->
 
 
-function Account({navigation}) {
+function AccountStackScreen({navigation}) {
   
   let UserDetails = [
     {
@@ -59,13 +61,14 @@ function Account({navigation}) {
 
 // <---------------------------------Main Screen for Account Tab------------------------------------------------->
 
+const AccountStack = createNativeStackNavigator();
 
-function AccountStackScreen() {
+function AccountScreen() {
   return (
     <AccountStack.Navigator>
-      <AccountStack.Screen name="Account" component={Account} options={{headerShown:false}} />
+      <AccountStack.Screen name="Account" component={AccountStackScreen} options={{headerShown:false}} />
       <AccountStack.Screen name="EditDetails" component={EditDetails} />
     </AccountStack.Navigator>
   );
 }
-export default AccountStackScreen
+export default AccountScreen
