@@ -1,16 +1,12 @@
 import React from 'react'
-import { Text,View,Image,TouchableOpacity } from 'react-native'
-import Styling from '../CSS/Styling'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import SwiggyHome from './Home'
-import UserProfile from './UserProfile'
-import { NavigationContainer } from '@react-navigation/native';
-import Instamart from './Instamart';
 import Search from './Search'
-import Food from './Food'
 import Account from './Account'
 import Cart from './Cart'
-import { BottomTabBarHeightContext } from '@react-navigation/bottom-tabs';
+import {Image} from 'react-native'
+import Styling from '../CSS/Styling'
+
 
 const Tab = createBottomTabNavigator();
 
@@ -19,16 +15,28 @@ function Footer() {
     
     <Tab.Navigator >
       <Tab.Screen name= "Swiggy" component={SwiggyHome} options={{ 
-        headerShown:false
+        headerShown:false,
+        tabBarIcon:({focused})=>(
+          <Image source={require('../Images/Swiggy.png')} style={{height:25,width:25,tintColor:focused?'black':'grey'}} ></Image>
+        )
       }}/>
       <Tab.Screen name="Search" component={Search} options={{ 
-        headerShown:false
+        headerShown:false,
+        tabBarIcon:({focused})=>(
+          <Image source={require('../Images/Search.png')} style={{height:25,width:25,tintColor:focused?'black':'grey'}} ></Image>
+        )
       }}/>
       <Tab.Screen name="Cart" component={Cart} options={{ 
-        headerShown:false
+        headerShown:false,
+        tabBarIcon:({focused})=>(
+          <Image source={require('../Images/bag.png')} style={{height:20,width:20,tintColor:focused?'black':'grey'}} ></Image>
+        )
       }}/>
       <Tab.Screen name="Account" component={Account} options={{ 
-        headerShown:false
+        headerShown:false,
+        tabBarIcon:({focused})=>(
+          <Image source={require('../Images/user.png')} style={{height:17,width:17,tintColor:focused?'black':'grey'}} ></Image>
+        )
       }}/>
     </Tab.Navigator>
    

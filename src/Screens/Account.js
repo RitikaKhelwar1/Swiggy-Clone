@@ -4,7 +4,11 @@ import Styling from '../CSS/Styling'
 
 function EditDetails({navigate}){
   return(
+    <View>
     <TextInput placeholder='enter your name'></TextInput>
+    <TextInput placeholder='enter your phone no.'></TextInput>
+    <TextInput placeholder='enter your e-mail address'></TextInput>
+    </View>
   )
 }
 
@@ -21,7 +25,7 @@ function Account() {
    return (
     <View style={Styling.GeneralComponent}>
 
-      {/* user details */}
+      {/* <----- user details ----->*/}
       
       <View style={{flexDirection:"row",borderBottomWidth:2,borderBottomColor:"black",paddingVertical:25,}}>
       {/* user details */}
@@ -31,7 +35,8 @@ function Account() {
         <Text style={{marginLeft:10,marginTop:5}} >+91-{UserDetails[0].PhoneNumber} . {UserDetails[0].Email}</Text>
         </View>
 
-        {/* button to edit user details */}
+        {/* <----- button to edit user details ------>*/}
+
         <View style={{flex:0.3,justifyContent:"center",alignItems:"flex-end"}}>
         <Button title='EDIT' color={"orange"}></Button>
         </View>
