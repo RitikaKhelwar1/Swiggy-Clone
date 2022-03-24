@@ -32,7 +32,7 @@ function AccountStackScreen({navigation}) {
   ] 
   
   return (
-    <View style={Styling.GeneralComponent}>
+    <View style={{backgroundColor:"white"}}>
 
       {/* <----- user details ----->*/}
       

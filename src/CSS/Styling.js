@@ -7,7 +7,7 @@ import { StyleSheet } from "react-native"
 export default StyleSheet.create({
     MainContainer: {
         flex: 1,
-        backgroundColor:"translucent",
+        backgroundColor:"white",
         // padding:20
         // flexWrap:"wrap"
 

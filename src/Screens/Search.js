@@ -59,7 +59,7 @@ function Search() {
 
         {/* Trending Searches */}
 
-        <View style={{borderColor:"whitesmoke",borderBottomWidth:10,borderTopWidth:1.5 ,marginTop:10,paddingVertical:15}}>
+        <View style={{borderColor:"whitesmoke",borderBottomWidth:10,marginTop:10,paddingVertical:15}}>
          <Text style={[Styling.font,{marginBottom:15}]}>Trending Searches</Text>
         <FlatList data={SearchData}
         renderItem={(element)=>{

@@ -2,7 +2,7 @@ import React from 'react'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import SwiggyHome from './Home'
 import Search from './Search'
-import Cart from './Cart'
+import CartStackNavigator from './Cart'
 import {Image,TouchableHighlight} from 'react-native'
 import Styling from '../CSS/Styling'
 import AccountScreen from './AccountScreen'
@@ -35,7 +35,7 @@ function Footer() {
         )
       }}/>
       {/* <-----------------------Cart Tab Screen-------------------------> */}
-      <Tab.Screen name="Cart" component={Cart} options={{ 
+      <Tab.Screen name="Cart" component={CartStackNavigator} options={{ 
         headerShown:false,
         tabBarHideOnKeyboard:true,
         tabBarLabelStyle:{fontSize:13},

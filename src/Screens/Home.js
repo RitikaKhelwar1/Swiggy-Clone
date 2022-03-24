@@ -11,7 +11,7 @@ import Header from './header'
 
 function Home() {
   return (
-    <View>
+    <View style={{backgroundColor:"white"}}>
          <Header/>
   <ScrollView showsVerticalScrollIndicator={false} >
         <Component1 />
