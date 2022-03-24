@@ -2,20 +2,9 @@ import React from 'react'
 import {Text,View,Image,Button,TextInput} from 'react-native'
 import Styling from '../CSS/Styling'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
+import { EditDetails } from './AccountStackScreenData'
 
 
-function EditDetails(){
-  return(
-    <View>
-    <TextInput placeholder='enter your name' style={{borderWidth:1,borderColor:"black",marginBottom:10,borderRadius:5}}></TextInput>
-    <TextInput placeholder='enter your phone no.'style={{borderWidth:1,borderColor:"black",marginBottom:10,borderRadius:5}}></TextInput>
-    <TextInput placeholder='enter your e-mail address'style={{borderWidth:1,borderColor:"black",marginBottom:10,borderRadius:5}}></TextInput>
-    <View style={{justifyContent:"center",alignItems:"center",marginTop:20}}>
-    <Button title='UPDATE' color='orange'></Button>
-    </View>
-    </View>
-  )
-}
 
 
 // function for ACCOUNT screen-------------------------->
@@ -51,15 +40,6 @@ function AccountStackScreen({navigation}) {
         </View>
 
       </View>
-
-    {/* <----------------DropDown List--------------> */}
-
-    <View>
-
-
-    </View>
-
-
     </View>
   )
 }
