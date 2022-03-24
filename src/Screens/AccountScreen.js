@@ -3,6 +3,7 @@ import {Text,View,Image,Button,TextInput} from 'react-native'
 import Styling from '../CSS/Styling'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 import { EditDetails } from './AccountStackScreenData'
+import {useState} from 'react'
 
 
 
@@ -11,14 +12,19 @@ import { EditDetails } from './AccountStackScreenData'
 
 
 function AccountStackScreen({navigation}) {
-  
+
+
   let UserDetails = [
     {
       UserName:"Ritika",
       PhoneNumber:"1234567891",
       Email:"abc@gmail.com"
-    }
-  ] 
+    }]
+  
+
+
+  const [UserName, setUserName] = useState(UserDetails[0].UserName)
+  
   
   return (
     <View style={{backgroundColor:"white"}}>
@@ -40,6 +46,14 @@ function AccountStackScreen({navigation}) {
         </View>
 
       </View>
+
+
+{/* ---------------------------------------------accordion-collapse- for MY Account--------------------------------------------------------------- */}
+
+
+
+
+
     </View>
   )
 }
