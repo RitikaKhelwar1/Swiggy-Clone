@@ -1,6 +1,6 @@
  import React from "react"
- import{Text,View,TextInput,Button} from 'react-native'
- import {SettingStates} from "./AccountScreen"
+ import{Text,View,TextInput,Button,Image} from 'react-native'
+
  
 
 
@@ -18,6 +18,30 @@
       </View>
     )
   }
+
+// <--------------------------Manage Address -------------------------------------->
+export function ManageAddress(){
+    return(
+        <View >
+            <Text style={{fontSize:20,fontWeight:"bold",color:"indianred"}} >I am ManageAddress screen</Text>
+        </View>
+    )
+}
+
+
+// <--------------------------Favourites -------------------------------------->
+export function Favourites(){
+    return(
+        <View style={{justifyContent:"flex-start",alignItems:"center",backgroundColor:"white",flex:1}}>
+            <Image source={require('../Images/Favourites.jpeg')} style={{height:200,width:200}} ></Image>
+            <Text style={{fontSize:10,fontWeight:"bold",color:"gray"}} >WHERE IS THE LOVE?</Text>
+            <Text style={{fontSize:10,fontWeight:"bold",color:"grey"}} >Once you Favourite a Restaurant it will appear here</Text>
+        </View>
+    )
+}
+
+
+
 // <--------------------------one membership -------------------------------------->
   export function OneMemberShip(){
       return(

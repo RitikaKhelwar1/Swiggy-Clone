@@ -5,10 +5,10 @@ import Styling from '../CSS/Styling';
 import {Divider} from 'react-native-elements/dist/divider/Divider'
 
 
-function MyAccount() {
+function MyAccount({navigation}) {
   return (
 
-//Simple collapsable
+// <-------------------------------------------------My Account------------------------------------------------------------------>
 <View>
 <Collapse>
     <CollapseHeader>
@@ -25,7 +25,7 @@ function MyAccount() {
     {/* <----------------manage address-----------------> */}
     <CollapseHeader>
    
-    <TouchableOpacity><View style={{padding:20,justifyContent:"center",borderBottomColor:"grey",borderBottomWidth:0.5}}>
+    <TouchableOpacity onPress={()=>navigation.navigate('ManageAddress')}><View style={{padding:20,justifyContent:"center",borderBottomColor:"grey",borderBottomWidth:0.5}}>
         <Text style={{fontSize:13}}>Manage Address</Text>
       </View></TouchableOpacity>
       
@@ -33,7 +33,7 @@ function MyAccount() {
     {/* <-------------------Favourites------------------> */}
     <CollapseHeader>
    
-    <TouchableOpacity><View style={{padding:20,justifyContent:"center",borderBottomColor:"grey",borderBottomWidth:0.5}}>
+    <TouchableOpacity onPress={()=> navigation.navigate('Favourites')} ><View style={{padding:20,justifyContent:"center",borderBottomColor:"grey",borderBottomWidth:0.5}}>
      <Text style={{fontSize:13}}>Favourites</Text>
       </View></TouchableOpacity>
       

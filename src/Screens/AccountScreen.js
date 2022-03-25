@@ -2,7 +2,7 @@ import React from 'react'
 import {Text,View,Image,Button,TextInput,TouchableOpacity} from 'react-native'
 import Styling from '../CSS/Styling'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
-import { EditDetails,OneMemberShip,SwiggyMoney,Help } from './AccountStackScreenData'
+import { EditDetails,OneMemberShip,SwiggyMoney,Help, ManageAddress,Favourites } from './AccountStackScreenData'
 import PaymentsRefund from './PaymentsRefund'
 import MyAccount from './MyAccount'
 import {Collapse,CollapseHeader, CollapseBody, AccordionList,} from 'accordion-collapse-react-native';
@@ -49,12 +49,14 @@ function AccountStackScreen({navigation}) {
       </View>
 
 
-{/* ---------------------------------------------accordion-collapse- for MY Account--------------------------------------------------------------- */}
+{/* ---------------------------------------------accordion-collapse for Account Screen--------------------------------------------------------------- */}
+{/* // <-------------------------------------------------My Account------------------------------------------------------------------> */}
+<MyAccount navigation={navigation} />
+  
+{/* <----------------------------------------------------------payements and refunds---------------------------------------------------> */}
+<PaymentsRefund navigation={navigation}/>
 
-<MyAccount/>
-<PaymentsRefund/>
-
-{/* -----------------------one membership------------------------------------------------ */}
+{/* <-----------------------------------------------------------one membership--------------------------------------------------------> */}
 <View>
 <Collapse>
 
@@ -71,7 +73,7 @@ function AccountStackScreen({navigation}) {
     </Collapse>
     </View>
 
-    {/* -------------------------------Swiggy Money------------------------------------------- */}
+    {/* <---------------------------------------------------------Swiggy Money-----------------------------------------------------------> */}
     <View>
 <Collapse>
     <CollapseHeader>
@@ -85,7 +87,7 @@ function AccountStackScreen({navigation}) {
     </CollapseHeader>
     </Collapse>
     </View>
-    {/* ---------------------------------------help--------------------------------------------- */}
+    {/* <------------------------------------------------------------help-----------------------------------------------------------------> */}
     <View>
 <Collapse>
     <CollapseHeader>
@@ -119,6 +121,8 @@ function AccountScreen() {
     <AccountStack.Navigator>
       <AccountStack.Screen name="AccountScreen" component={AccountStackScreen} options={{headerShown:false}} />
       <AccountStack.Screen name="EditDetails" component={EditDetails} />
+      <AccountStack.Screen name="ManageAddress" component={ManageAddress} />
+      <AccountStack.Screen name="Favourites" component={Favourites} />
       <AccountStack.Screen name="OneMemberShip" component={OneMemberShip} />
       <AccountStack.Screen name="SwiggyMoney" component={SwiggyMoney} />
       <AccountStack.Screen name="Help" component={Help} />
