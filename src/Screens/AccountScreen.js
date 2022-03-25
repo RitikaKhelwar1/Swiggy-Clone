@@ -1,10 +1,13 @@
 import React from 'react'
-import {Text,View,Image,Button,TextInput} from 'react-native'
+import {Text,View,Image,Button,TextInput,TouchableOpacity} from 'react-native'
 import Styling from '../CSS/Styling'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
-import { EditDetails } from './AccountStackScreenData'
+import { EditDetails,OneMemberShip,SwiggyMoney,Help } from './AccountStackScreenData'
 import PaymentsRefund from './PaymentsRefund'
 import MyAccount from './MyAccount'
+import {Collapse,CollapseHeader, CollapseBody, AccordionList,} from 'accordion-collapse-react-native';
+import {Divider} from 'react-native-elements/dist/divider/Divider'
+
 
 
 
@@ -51,6 +54,53 @@ function AccountStackScreen({navigation}) {
 <MyAccount/>
 <PaymentsRefund/>
 
+{/* -----------------------one membership------------------------------------------------ */}
+<View>
+<Collapse>
+
+    <CollapseHeader>
+   <TouchableOpacity onPress={()=>navigation.navigate('OneMemberShip')}>
+      <View style={{padding:20,justifyContent:"center",borderBottomColor:"grey",borderBottomWidth:0.5}}>
+        <Text style={{fontWeight: "bold",color: "indianred",fontSize: 20,}}>ONE <Text style={Styling.AccountFont}>membership</Text></Text>
+        <Text style={{fontSize:13}}>Get unlimited Free Delivery {`&`} Extra Discounts with Swiggy One. Buy @ Rs75/month </Text>
+      </View>
+      </TouchableOpacity>
+      
+    <Divider width={2}/>
+    </CollapseHeader>
+    </Collapse>
+    </View>
+
+    {/* -------------------------------Swiggy Money------------------------------------------- */}
+    <View>
+<Collapse>
+    <CollapseHeader>
+    <TouchableOpacity onPress={()=>navigation.navigate('SwiggyMoney')}>
+      <View style={{padding:20,justifyContent:"center",borderBottomColor:"grey",borderBottomWidth:0.5}}>
+        <Text style={Styling.AccountFont}>Swiggy Money</Text>
+        <Text style={{fontSize:13}}>View Acoount Balance {`&`} Transactions History</Text>
+      </View></TouchableOpacity>
+      
+    <Divider width={2}/>
+    </CollapseHeader>
+    </Collapse>
+    </View>
+    {/* ---------------------------------------help--------------------------------------------- */}
+    <View>
+<Collapse>
+    <CollapseHeader>
+    <TouchableOpacity onPress={()=>navigation.navigate('Help')}>
+      <View style={{padding:20,justifyContent:"center",borderBottomColor:"grey",borderBottomWidth:0.5}}>
+        <Text style={Styling.AccountFont}>Help</Text>
+        <Text style={{fontSize:13}}>FAQs {`&`} Links</Text>
+      </View></TouchableOpacity>
+      
+    <Divider width={2}/>
+    </CollapseHeader>
+    </Collapse>
+    </View>
+
+
 
 
     </View>
@@ -69,6 +119,9 @@ function AccountScreen() {
     <AccountStack.Navigator>
       <AccountStack.Screen name="AccountScreen" component={AccountStackScreen} options={{headerShown:false}} />
       <AccountStack.Screen name="EditDetails" component={EditDetails} />
+      <AccountStack.Screen name="OneMemberShip" component={OneMemberShip} />
+      <AccountStack.Screen name="SwiggyMoney" component={SwiggyMoney} />
+      <AccountStack.Screen name="Help" component={Help} />
     </AccountStack.Navigator>
   );
 }

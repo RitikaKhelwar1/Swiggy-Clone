@@ -3,9 +3,10 @@ import {View,Text,TouchableOpacity} from 'react-native'
 import {Collapse,CollapseHeader, CollapseBody, AccordionList,} from 'accordion-collapse-react-native';
 import Styling from '../CSS/Styling';
 import {Divider} from 'react-native-elements/dist/divider/Divider'
+import {OneMemberShip} from './AccountStackScreenData'
 
 
-function PaymentsRefund() {
+function PaymentsRefund({navigation}) {
   return (
 
 //Simple collapsable
@@ -25,7 +26,7 @@ function PaymentsRefund() {
     {/* <----------------Refund Status-----------------> */}
     <CollapseHeader>
    
-    <TouchableOpacity><View style={{padding:20,justifyContent:"center",borderBottomColor:"grey",borderBottomWidth:0.5}}>
+    <TouchableOpacity onPress={()=>navigation.navigate('OneMemberShip')} ><View style={{padding:20,justifyContent:"center",borderBottomColor:"grey",borderBottomWidth:0.5}}>
         <Text style={{fontSize:13}}>Refund Status</Text>
       </View></TouchableOpacity>
       

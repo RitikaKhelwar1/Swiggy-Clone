@@ -18,3 +18,29 @@
       </View>
     )
   }
+// <--------------------------one membership -------------------------------------->
+  export function OneMemberShip(){
+      return(
+          <View >
+              <Text style={{fontSize:20,fontWeight:"bold",color:"indianred"}} >Buy One Membership @ Rs75/month and have more benefits</Text>
+          </View>
+      )
+  }
+
+  // <--------------------------Swiggy Money -------------------------------------->
+  export function SwiggyMoney(){
+    return(
+        <View >
+            <Text style={{fontSize:20,fontWeight:"bold",color:"indianred"}} >I am Swiggy Money screen</Text>
+        </View>
+    )
+}
+
+// <--------------------------Help  -------------------------------------->
+export function Help(){
+    return(
+        <View >
+            <Text style={{fontSize:20,fontWeight:"bold",color:"indianred"}} >Help Swiggy. its dying </Text>
+        </View>
+    )
+}
