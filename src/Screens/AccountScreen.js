@@ -3,7 +3,8 @@ import {Text,View,Image,Button,TextInput} from 'react-native'
 import Styling from '../CSS/Styling'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 import { EditDetails } from './AccountStackScreenData'
-import {useState} from 'react'
+import PaymentsRefund from './PaymentsRefund'
+import MyAccount from './MyAccount'
 
 
 
@@ -12,22 +13,17 @@ import {useState} from 'react'
 
 
 function AccountStackScreen({navigation}) {
-
-
+  
   let UserDetails = [
     {
       UserName:"Ritika",
       PhoneNumber:"1234567891",
       Email:"abc@gmail.com"
     }]
-  
-
-
-  const [UserName, setUserName] = useState(UserDetails[0].UserName)
-  
-  
   return (
     <View style={{backgroundColor:"white"}}>
+
+  
 
       {/* <----- user details ----->*/}
       
@@ -44,13 +40,16 @@ function AccountStackScreen({navigation}) {
         <View style={{flex:0.3,justifyContent:"center",alignItems:"flex-end"}}>
         <Button title='EDIT' color={"orange"} onPress={()=> navigation.navigate('EditDetails')} ></Button>
         </View>
+        
+       
 
       </View>
 
 
 {/* ---------------------------------------------accordion-collapse- for MY Account--------------------------------------------------------------- */}
 
-
+<MyAccount/>
+<PaymentsRefund/>
 
 
 

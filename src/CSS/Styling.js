@@ -145,7 +145,15 @@ export default StyleSheet.create({
     FooterImg:{
         width:25,
         height:25
-    }
+    },
+    AccountFont:{
+        
+        fontWeight: "bold",
+        color: "black",
+        fontSize: 17,
+        
+    },
+   
     
 
 })

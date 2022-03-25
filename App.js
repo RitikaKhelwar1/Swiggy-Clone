@@ -11,6 +11,7 @@ const App = () => {
   return (
 
     <SafeAreaView style={Styling.MainContainer} >
+      
       {/* <----------Bottom Tabs-----------> */}
       <NavigationContainer>
       <Footer/>
