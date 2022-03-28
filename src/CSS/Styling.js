@@ -25,7 +25,8 @@ export default StyleSheet.create({
         justifyContent: 'space-around', 
         flexDirection: "row", 
         marginTop: 10, 
-        marginBottom: 10
+        marginBottom: 10,
+        alignItems:"center"
     },
     Component1Image: {
         borderRadius: 5,

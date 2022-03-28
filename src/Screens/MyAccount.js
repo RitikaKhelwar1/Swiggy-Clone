@@ -1,6 +1,6 @@
 import React from 'react'
 import {View,Text,TouchableOpacity} from 'react-native'
-import {Collapse,CollapseHeader, CollapseBody, AccordionList,} from 'accordion-collapse-react-native';
+import {Collapse,CollapseHeader, CollapseBody,} from 'accordion-collapse-react-native';
 import Styling from '../CSS/Styling';
 import {Divider} from 'react-native-elements/dist/divider/Divider'
 
@@ -10,7 +10,7 @@ function MyAccount({navigation}) {
 
 // <-------------------------------------------------My Account------------------------------------------------------------------>
 <View>
-<Collapse>
+<Collapse  >
     <CollapseHeader>
    
       <View style={{padding:20,justifyContent:"center",borderBottomColor:"grey",borderBottomWidth:0.5}}>

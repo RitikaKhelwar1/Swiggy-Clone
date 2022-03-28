@@ -88,7 +88,7 @@ function AccountStackScreen({navigation}) {
     </Collapse>
     </View>
     {/* <------------------------------------------------------------help-----------------------------------------------------------------> */}
-    <View>
+<View>
 <Collapse>
     <CollapseHeader>
     <TouchableOpacity onPress={()=>navigation.navigate('Help')}>

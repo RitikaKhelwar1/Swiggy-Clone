@@ -8,13 +8,16 @@ import PopularCurations from './PopularCurations'
 import Instamart from './Instamart'
 import Component1 from './component1'
 import Header from './header'
+import {createNativeStackNavigator} from '@react-navigation/native-stack'
+import {Offers,HomeLocation} from './HomeStackScreenData'
+import {OneMemberShip} from './AccountStackScreenData'
 
-function Home() {
+function Home({navigation}) {
   return (
     <View style={{backgroundColor:"white"}}>
-         <Header/>
+         <Header navigation={navigation}/>
   <ScrollView showsVerticalScrollIndicator={false} >
-        <Component1 />
+        <Component1 navigation={navigation}/>
         <Component2/>
         <Component3/>
         <SubComponent3/>
@@ -32,4 +35,17 @@ function Home() {
   )
 }
 
-export default Home
+const HomeStack = createNativeStackNavigator()
+
+function HomeStackScreen(){
+  return(
+  <HomeStack.Navigator>
+    <HomeStack.Screen name="Home" component={Home} options={{headerShown:false}} />
+    <HomeStack.Screen name="Offers" component={Offers}  />
+    <HomeStack.Screen name="HomeLocation" component={HomeLocation} options={{headerShown:false}} />
+    <HomeStack.Screen name="SwiggyOne" component={OneMemberShip}  />
+  </HomeStack.Navigator>
+  )
+}
+
+export default HomeStackScreen
