@@ -1,16 +1,16 @@
 import React from 'react'
 import {Text, ScrollView,View} from 'react-native'
-import Component2 from './Component2'
-import Component3 from './Component3'
-import SubComponent3 from './SubComponent3'
-import PopularBrands from './PopularBrands'
-import PopularCurations from './PopularCurations'
-import Instamart from './Instamart'
-import Component1 from './component1'
-import Header from './header'
+import Component2 from '../components/Component2'
+import Component3 from '../components/Component3'
+import SubComponent3 from '../components/SubComponent3'
+import PopularBrands from '../components/PopularBrands'
+import PopularCurations from '../components/PopularCurations'
+import Instamart from '../components/Instamart'
+import Component1 from '../components/component1'
+import Header from '../components/header'
 import {createNativeStackNavigator} from '@react-navigation/native-stack'
-import {Offers,HomeLocation} from './HomeStackScreenData'
-import {OneMemberShip} from './AccountStackScreenData'
+import {Offers,HomeLocation} from '../components/HomeStackScreenData'
+import {OneMemberShip} from '../components/AccountStackScreenData'
 
 function Home({navigation}) {
   return (
@@ -42,7 +42,7 @@ function HomeStackScreen(){
   <HomeStack.Navigator>
     <HomeStack.Screen name="Home" component={Home} options={{headerShown:false}} />
     <HomeStack.Screen name="Offers" component={Offers}  />
-    <HomeStack.Screen name="HomeLocation" component={HomeLocation} options={{headerShown:false}} />
+    <HomeStack.Screen name="HomeLocation" component={HomeLocation} options={{headerBackButtonMenuEnabled:false,headerTransparent:true,headerTitle:""}} />
     <HomeStack.Screen name="SwiggyOne" component={OneMemberShip}  />
   </HomeStack.Navigator>
   )

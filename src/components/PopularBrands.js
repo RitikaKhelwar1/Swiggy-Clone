@@ -1,6 +1,6 @@
 import React from 'react'
 import {Text, Image, FlatList, View, ScrollView,Dimensions,TouchableOpacity} from 'react-native'
-import Styling from '../CSS/Styling'
+import Styling from '../styles/Styling'
 import TopPick from './TopPick'
 import PopularBrandsData from './PopularBrandsData'
 import BrandData from './BrandData'

@@ -1,7 +1,7 @@
 import React from 'react'
 import {View,Text,TouchableOpacity} from 'react-native'
 import {Collapse,CollapseHeader, CollapseBody, AccordionList,} from 'accordion-collapse-react-native';
-import Styling from '../CSS/Styling';
+import Styling from '../styles/Styling';
 import {Divider} from 'react-native-elements/dist/divider/Divider'
 import {OneMemberShip} from './AccountStackScreenData'
 

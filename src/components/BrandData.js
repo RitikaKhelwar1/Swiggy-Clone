@@ -1,8 +1,8 @@
 export default BrandData = [
     {
         key:"1",
-        uri:require('../Images/dominos.png'),
-        url:require('../Images/PizzaHut.jpg'),
+        uri:require('../assets/Images/dominos.png'),
+        url:require('../assets/Images/PizzaHut.jpg'),
         off1 :"50% OFF",
         off2:"70% OFF",
         text1: "UPTO RS 100",
@@ -11,8 +11,8 @@ export default BrandData = [
     
     {
         key:"2",
-        uri:require('../Images/McDonald.png'),
-        url:require('../Images/SubWay.jpg'),
+        uri:require('../assets/Images/McDonald.png'),
+        url:require('../assets/Images/SubWay.jpg'),
         off1 :"20% OFF",
         off2:"60% OFF",
         text1: "UPTO RS 80",
@@ -20,8 +20,8 @@ export default BrandData = [
     },
     {
         key:"3",
-        uri:require('../Images/Katani.jpg'),
-        url:require('../Images/LaPino.png'),
+        uri:require('../assets/Images/Katani.jpg'),
+        url:require('../assets/Images/LaPino.png'),
         off1 :"50% OFF",
         off2:"80% OFF",
         text1: "UPTO RS 70",
@@ -29,8 +29,8 @@ export default BrandData = [
     },
     {
         key:"4",
-        uri:require('../Images/BurgerKing.png'),
-        url:require('../Images/Barista.jpeg'),
+        uri:require('../assets/Images/BurgerKing.png'),
+        url:require('../assets/Images/Barista.jpeg'),
         off1 :"50% OFF",
         off2:"50% OFF",
         text1: "UPTO RS 400",
@@ -38,8 +38,8 @@ export default BrandData = [
     },
     {
         key:"5",
-        uri:require('../Images/dominos.png'),
-        url:require('../Images/PizzaHut.jpg'),
+        uri:require('../assets/Images/dominos.png'),
+        url:require('../assets/Images/PizzaHut.jpg'),
         off1 :"50% OFF",
         off2:"70% OFF",
         text1: "UPTO RS 100",
@@ -47,8 +47,8 @@ export default BrandData = [
     },
     {
         key:"6",
-        uri:require('../Images/McDonald.png'),
-        url:require('../Images/SubWay.jpg'),
+        uri:require('../assets/Images/McDonald.png'),
+        url:require('../assets/Images/SubWay.jpg'),
         off1 :"50% OFF",
         off2:"70% OFF",
         text1: "UPTO RS 100",
@@ -56,8 +56,8 @@ export default BrandData = [
     },
     {
         key:"7",
-        uri:require('../Images/Katani.jpg'),
-        url:require('../Images/LaPino.png'),
+        uri:require('../assets/Images/Katani.jpg'),
+        url:require('../assets/Images/LaPino.png'),
         off1 :"50% OFF",
         off2:"70% OFF",
         text1: "UPTO RS 100",
@@ -65,8 +65,8 @@ export default BrandData = [
     },
     {
         key:"8",
-        uri:require('../Images/BurgerKing.png'),
-        url:require('../Images/Barista.jpeg'),
+        uri:require('../assets/Images/BurgerKing.png'),
+        url:require('../assets/Images/Barista.jpeg'),
         off1 :"50% OFF",
         off2:"70% OFF",
         text1: "UPTO RS 100",
@@ -74,8 +74,8 @@ export default BrandData = [
     },
     {
         key:"9",
-        uri:require('../Images/dominos.png'),
-        url:require('../Images/PizzaHut.jpg'),
+        uri:require('../assets/Images/dominos.png'),
+        url:require('../assets/Images/PizzaHut.jpg'),
         off1 :"50% OFF",
         off2:"70% OFF",
         text1: "UPTO RS 100",
@@ -83,8 +83,8 @@ export default BrandData = [
     },
     {
         key:"10",
-        uri:require('../Images/McDonald.png'),
-        url:require('../Images/SubWay.jpg'),
+        uri:require('../assets/Images/McDonald.png'),
+        url:require('../assets/Images/SubWay.jpg'),
         off1 :"50% OFF",
         off2:"70% OFF",
         text1: "UPTO RS 100",
@@ -92,8 +92,8 @@ export default BrandData = [
     },
     {
         key:"11",
-        uri:require('../Images/BurgerKing.png'),
-        url:require('../Images/Barista.jpeg'),
+        uri:require('../assets/Images/BurgerKing.png'),
+        url:require('../assets/Images/Barista.jpeg'),
         off1 :"50% OFF",
         off2:"70% OFF",
         text1: "UPTO RS 100",

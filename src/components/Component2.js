@@ -1,7 +1,7 @@
 import React from 'react'
 import { View, Text, FlatList, Image,TouchableOpacity} from 'react-native'
-import Styling from '../CSS/Styling'
-import data from '../Screens/data'
+import Styling from '../styles/Styling'
+import data from './data'
 
 //offers in the app
 

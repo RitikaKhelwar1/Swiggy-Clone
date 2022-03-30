@@ -3,19 +3,20 @@ import {
   SafeAreaView,
  
 } from 'react-native';
-import Styling from './src/CSS/Styling';
-import Footer from './src/Screens/Footer';
+import Styling from './src/styles/Styling';
+import Footer from './src/navigation/Routes';
+import Login from './src/Screens/Login';
 import { NavigationContainer } from '@react-navigation/native';
 
+
 const App = () => {
+  
   return (
 
     <SafeAreaView style={Styling.MainContainer} >
       
       {/* <----------Bottom Tabs-----------> */}
-      <NavigationContainer>
-      <Footer/>
-      </NavigationContainer>
+     <Login/>
       
       
       

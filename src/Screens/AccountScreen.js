@@ -1,10 +1,10 @@
 import React from 'react'
 import {Text,View,Image,Button,TextInput,TouchableOpacity} from 'react-native'
-import Styling from '../CSS/Styling'
+import Styling from '../styles/Styling'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
-import { EditDetails,OneMemberShip,SwiggyMoney,Help, ManageAddress,Favourites } from './AccountStackScreenData'
-import PaymentsRefund from './PaymentsRefund'
-import MyAccount from './MyAccount'
+import { EditDetails,OneMemberShip,SwiggyMoney,Help, ManageAddress,Favourites } from '../components/AccountStackScreenData'
+import PaymentsRefund from '../components/PaymentsRefund'
+import MyAccount from '../components/MyAccount'
 import {Collapse,CollapseHeader, CollapseBody, AccordionList,} from 'accordion-collapse-react-native';
 import {Divider} from 'react-native-elements/dist/divider/Divider'
 
