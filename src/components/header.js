@@ -1,5 +1,6 @@
 import React from 'react'
 import { Text, View, Image, TouchableOpacity ,StatusBar,TouchableHighlight} from 'react-native'
+import ImagePath from '../constants/ImagePath'
 import Styling from '../styles/Styling'
 
 
@@ -27,7 +28,7 @@ function Header({navigation}) {
 
     </View></TouchableHighlight>
     <TouchableHighlight underlayColor={"whitesmoke"} onPress={()=> navigation.navigate('Offers')} style={{ flex: 0.25 ,paddingHorizontal:5,justifyContent:'center'}}><View style={{flexDirection:"row",alignItems:'center',alignContent:"center",justifyContent:"flex-end"}}>
-        <Image source={require('../assets/Images/offer.png')} style={[Styling.headerLogo,{marginRight:5}]} ></Image>
+        <Image source={ImagePath.offer} style={[Styling.headerLogo,{marginRight:5}]} ></Image>
         <Text style={{fontWeight: "bold",color: "grey",fontSize: 17,marginRight:5}}>Offers</Text>
       </View></TouchableHighlight>
     </View>

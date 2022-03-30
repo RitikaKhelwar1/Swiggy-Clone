@@ -1,5 +1,6 @@
  import React from "react"
  import{Text,View,TextInput,Button,Image} from 'react-native'
+ import ImagePath from "../constants/ImagePath"
 
  
 
@@ -33,7 +34,7 @@ export function ManageAddress(){
 export function Favourites(){
     return(
         <View style={{justifyContent:"flex-start",alignItems:"center",backgroundColor:"white",flex:1}}>
-            <Image source={require('../assets/Images/Favourites.jpeg')} style={{height:200,width:200}} ></Image>
+            <Image source={ImagePath.Favourites} style={{height:200,width:200}} ></Image>
             <Text style={{fontSize:10,fontWeight:"bold",color:"gray"}} >WHERE IS THE LOVE?</Text>
             <Text style={{fontSize:10,fontWeight:"bold",color:"grey"}} >Once you Favourite a Restaurant it will appear here</Text>
         </View>

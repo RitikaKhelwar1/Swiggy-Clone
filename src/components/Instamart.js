@@ -1,5 +1,6 @@
 import React from 'react'
 import {Text,View,FlatList,Image,Button,TouchableOpacity} from 'react-native'
+import ImagePath from '../constants/ImagePath'
 import Styling from '../styles/Styling'
 
 function Instamart() {
@@ -15,7 +16,7 @@ function Instamart() {
             </View>
        </View></TouchableOpacity>
        <TouchableOpacity><View style={Styling.InstamartOff}>
-            <Image source={require('../assets/Images/InstamartOff.png')} style={{width:400,borderRadius:15,height:180}} ></Image>
+            <Image source={ImagePath.InstamartOff} style={{width:400,borderRadius:15,height:180}} ></Image>
        </View></TouchableOpacity>
        <View></View>
        <View style={{marginTop:10,borderRadius:50,marginHorizontal:20,}}>

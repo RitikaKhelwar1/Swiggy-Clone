@@ -1,5 +1,6 @@
 import React from 'react'
 import {Text,View,TextInput,FlatList, ScrollView,VirtualizedList ,Image} from 'react-native'
+import ImagePath from '../constants/ImagePath'
 import Styling from '../styles/Styling'
 
 function Search() {
@@ -48,7 +49,7 @@ function Search() {
         renderItem={(element)=>{
           return(
             <View style={{flex:1,flexDirection:"row",borderColor:"grey",borderWidth:1,borderRadius:20,margin:5,padding:5}}>
-              <Image source={require('../assets/Images/wall-clock.png')} style={Styling.headerLogo} ></Image>
+              <Image source={ImagePath.wallclock} style={Styling.headerLogo} ></Image>
               <Text  style={{marginLeft:10,fontSize:12.5}}>{element.item.search}</Text>
             </View>
           )
@@ -65,7 +66,7 @@ function Search() {
         renderItem={(element)=>{
           return(
             <View style={{flex:1,flexDirection:"row",borderColor:"grey",borderWidth:1,borderRadius:20,margin:5,padding:5}}>
-              <Image source={require('../assets/Images/trend.png')} style={Styling.headerLogo} ></Image>
+              <Image source={ImagePath.trend} style={Styling.headerLogo} ></Image>
               <Text style={{marginLeft:5,fontSize:12.5}} >{element.item.search}</Text>
             </View>
           )

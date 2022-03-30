@@ -7,6 +7,7 @@ import {Image,TouchableHighlight} from 'react-native'
 import Styling from '../styles/Styling'
 import AccountScreen from '../Screens/AccountScreen'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
+import ImagePath from '../constants/ImagePath'
 
 const Tab = createBottomTabNavigator();
 
@@ -21,7 +22,7 @@ function Routes() {
         tabBarLabelStyle:{fontSize:13},
         tabBarActiveTintColor:'black',
         tabBarIcon:({focused})=>(
-          <Image source={require('../assets/Images/Swiggy.png')} style={{height:25,width:25,tintColor:focused?'black':'grey'}} ></Image>
+          <Image source={ImagePath.Swiggy} style={{height:25,width:25,tintColor:focused?'black':'grey'}} ></Image>
         )
       }}/>
       {/* <----------------------Search Tab Screen-------------------------> */}
@@ -31,7 +32,7 @@ function Routes() {
         tabBarLabelStyle:{fontSize:13},
         tabBarActiveTintColor:'black',
         tabBarIcon:({focused})=>(
-          <Image source={require('../assets/Images/Search.png')} style={{height:25,width:25,tintColor:focused?'black':'grey'}} ></Image>
+          <Image source={ImagePath.Search} style={{height:25,width:25,tintColor:focused?'black':'grey'}} ></Image>
         )
       }}/>
       {/* <-----------------------Cart Tab Screen-------------------------> */}
@@ -41,7 +42,7 @@ function Routes() {
         tabBarLabelStyle:{fontSize:13},
         tabBarActiveTintColor:'black',
         tabBarIcon:({focused})=>(
-          <Image source={require('../assets/Images/bag.png')} style={{height:20,width:20,tintColor:focused?'black':'grey'}} ></Image>
+          <Image source={ImagePath.bag} style={{height:20,width:20,tintColor:focused?'black':'grey'}} ></Image>
         ),
         
         
@@ -53,7 +54,7 @@ function Routes() {
         tabBarLabelStyle:{fontSize:13},
         tabBarActiveTintColor:'black',
         tabBarIcon:({focused})=>(
-          <Image source={require('../assets/Images/user.png')} style={{height:17,width:17,tintColor:focused?'black':'grey'}} ></Image>
+          <Image source={ImagePath.user} style={{height:17,width:17,tintColor:focused?'black':'grey'}} ></Image>
         )
       }}/>
     </Tab.Navigator>

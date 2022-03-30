@@ -3,12 +3,13 @@ import {Text,View,Image,TouchableOpacity} from 'react-native'
 // import DropdownMenu from 'react-native-dropdown-menu'
 import Styling from '../styles/Styling'
 import {createNativeStackNavigator} from '@react-navigation/native-stack'
+import ImagePath from '../constants/ImagePath'
 
 
 function Cart({navigation}) {
   return (
       <View style={{justifyContent:'center',alignItems:"center", flex:1,backgroundColor:"white"}} >
-  <Image source={require('../assets/Images/Cart.jpeg')} style={{height:270,width:250}}></Image>
+  <Image source={ImagePath.Cart} style={{height:270,width:250}}></Image>
   <Text style={[Styling.font,{margin:10}]} >GOOD FOOD IS ALWAYS COOKING</Text>
   <Text>Your cart is empty</Text>
   <Text>Add something from the menu</Text>
