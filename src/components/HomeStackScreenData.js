@@ -1,14 +1,21 @@
-import React from 'react'
-import { Text, View, TextInput, TouchableOpacity, Button } from 'react-native'
+import React, { useState } from 'react'
+import { Text, View, TextInput, TouchableOpacity, Button ,Image,SafeAreaView,
+    StyleSheet,} from 'react-native'
 import ActionSheet, { SheetManager } from "react-native-actions-sheet";
+import data from './data';
+import AppIntroSlider from 'react-native-app-intro-slider';
+import BrandData from './BrandData';
+
 
 
 
 export function Offers() {
     return(
-        <Text>I am offer Screen</Text>
-    )
-}
+        <Text>I am Offer Screen</Text>
+    )}
+    
+  
+    
     
 
 export function HomeLocation() {
@@ -19,4 +26,5 @@ export function HomeLocation() {
         </View>
     )
 }
+
 

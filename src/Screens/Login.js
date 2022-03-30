@@ -3,6 +3,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import React from 'react'
 import { Text, View, TextInput, TouchableOpacity, Button } from 'react-native'
 import ActionSheet, { SheetManager } from "react-native-actions-sheet";
+import LoginSlider from '../components/LoginSlider';
 import Routes from '../navigation/Routes';
 
 
@@ -25,6 +26,8 @@ function LoginStackScreen(){
 }
 
 export default LoginStackScreen
+// -------------------------------------------------------------------------------------------------------------
+
 
 
 
@@ -36,8 +39,13 @@ function Login({navigation}) {
 }
 
 return (
+
   // ----------------------Login Page---------------------------------------
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: "center" }}>
+  <View style={{flexDirection:"column",position:"absolute"}}>
+   
+      <LoginSlider/>
+   
+    <View style={{ justifyContent: 'flex-end', alignItems: "center" ,paddingVertical:20,flex:0.5}}>
         <Text>Ready to order from top restaurants?</Text>
         <View style={{marginVertical:10}} ><Button title='SET DELIVERY LOCATION' color={"orange"} /></View>
         <TouchableOpacity onPress={show}  style={{flexDirection:"row"}}><View><Text>Have an account? </Text></View>
@@ -68,6 +76,7 @@ return (
 
         </ActionSheet>
 
+    </View>
     </View>
 )
 }
