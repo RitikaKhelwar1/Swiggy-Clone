@@ -4,6 +4,8 @@ import React from 'react'
 import { Text, View, TextInput, TouchableOpacity, Button } from 'react-native'
 import ActionSheet, { SheetManager } from "react-native-actions-sheet";
 import LoginSlider from '../components/LoginSlider';
+import { useState } from 'react';
+import { event } from 'react-native-reanimated';
 
 
 
@@ -13,6 +15,11 @@ function Login({navigation}) {
   function show(){
     SheetManager.show("loginPage")
     
+  }
+
+  const [MobileNumber, setMobileNumber] = useState("")
+  function Mobile(event){
+    setMobileNumber(event.target.value)
   }
   
   return (
@@ -30,7 +37,7 @@ function Login({navigation}) {
         </TouchableOpacity>
 
 {/* ------------------------Action sheet on login page-------------------------------------------------- */}
-        <ActionSheet id="loginPage">
+        <ActionSheet id="loginPage" bounceOnOpen={true} >
 
             <View style={{height:"45%",margin:15}}>
             
@@ -38,12 +45,12 @@ function Login({navigation}) {
        <Text>Enter your phone number to proceed</Text>
        <Text style={{fontSize:10,marginTop:10}}>10 digit mobile number</Text>
        <View style={{borderBottomColor:"orange",borderBottomWidth:2,}}>
-       <TextInput placeholder='enter ten digit number' >+91 </TextInput>
+       <TextInput placeholder='enter ten digit number'onChange={Mobile}>+91 {MobileNumber}</TextInput>
        </View>
        <View  style={{marginTop:10}}>
 
 {/* -----------------------------Button------------------------------- */}
-       <Button title='CONTINUE' color={"orange"}></Button></View>
+       <Button  title="CONTINUE" color={"orange"}></Button></View>
        
        
        <Text style={{fontSize:13,marginTop:15,textAlign:"center"}} >By clicking, I accept the Terms {`&`} Conditions {`&`} Privacy Policy</Text>
