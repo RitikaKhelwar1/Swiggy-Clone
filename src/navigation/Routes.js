@@ -15,7 +15,7 @@ export default function Routes() {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        {false ? MainStack(Stack) : AuthStack(Stack)}
+        {true ? MainStack(Stack) : AuthStack(Stack)}
       </Stack.Navigator>
     </NavigationContainer>
   );

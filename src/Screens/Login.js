@@ -43,7 +43,7 @@ function Login({navigation}) {
        <View  style={{marginTop:10}}>
 
 {/* -----------------------------Button------------------------------- */}
-       <Button title='CONTINUE' color={"orange"} onPress={()=> navigation.navigate('SwiggyApp')}></Button></View>
+       <Button title='CONTINUE' color={"orange"}></Button></View>
        
        
        <Text style={{fontSize:13,marginTop:15,textAlign:"center"}} >By clicking, I accept the Terms {`&`} Conditions {`&`} Privacy Policy</Text>
