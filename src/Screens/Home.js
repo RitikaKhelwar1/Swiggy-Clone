@@ -35,17 +35,6 @@ function Home({navigation}) {
   )
 }
 
-const HomeStack = createNativeStackNavigator()
 
-function HomeStackScreen(){
-  return(
-  <HomeStack.Navigator>
-    <HomeStack.Screen name="Home" component={Home} options={{headerShown:false}} />
-    <HomeStack.Screen name="Offers" component={Offers}  />
-    <HomeStack.Screen name="HomeLocation" component={HomeLocation} options={{headerBackButtonMenuEnabled:false,headerTransparent:true,headerTitle:""}} />
-    <HomeStack.Screen name="SwiggyOne" component={OneMemberShip}  />
-  </HomeStack.Navigator>
-  )
-}
 
-export default HomeStackScreen
+export default Home

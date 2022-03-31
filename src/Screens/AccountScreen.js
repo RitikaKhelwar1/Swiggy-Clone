@@ -15,7 +15,7 @@ import {Divider} from 'react-native-elements/dist/divider/Divider'
 // function for ACCOUNT screen-------------------------->
 
 
-function AccountStackScreen({navigation}) {
+function AccountScreen({navigation}) {
   
   let UserDetails = [
     {
@@ -112,21 +112,5 @@ function AccountStackScreen({navigation}) {
 
 
 
-// <---------------------------------Main Screen for Account Tab------------------------------------------------->
 
-const AccountStack = createNativeStackNavigator();
-
-function AccountScreen() {
-  return (
-    <AccountStack.Navigator>
-      <AccountStack.Screen name="AccountScreen" component={AccountStackScreen} options={{headerShown:false}} />
-      <AccountStack.Screen name="EditDetails" component={EditDetails} />
-      <AccountStack.Screen name="ManageAddress" component={ManageAddress} />
-      <AccountStack.Screen name="Favourites" component={Favourites} />
-      <AccountStack.Screen name="OneMemberShip" component={OneMemberShip} />
-      <AccountStack.Screen name="SwiggyMoney" component={SwiggyMoney} />
-      <AccountStack.Screen name="Help" component={Help} />
-    </AccountStack.Navigator>
-  );
-}
 export default AccountScreen

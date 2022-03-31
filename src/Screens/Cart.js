@@ -21,17 +21,6 @@ function Cart({navigation}) {
 }
 
 
-const Stack = createNativeStackNavigator()
-
-function CartStackScreen(){
-  return(
-  <Stack.Navigator>
-    <Stack.Screen name="CartStackScreen" component={Cart} options={{headerShown:false}}/>
-  </Stack.Navigator>
-  )
-}
 
 
-
-
-export default CartStackScreen
+export default Cart

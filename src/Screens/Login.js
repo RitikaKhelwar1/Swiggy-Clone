@@ -1,32 +1,9 @@
-import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
+// import { NavigationContainer } from '@react-navigation/native';
+
 import React from 'react'
 import { Text, View, TextInput, TouchableOpacity, Button } from 'react-native'
 import ActionSheet, { SheetManager } from "react-native-actions-sheet";
 import LoginSlider from '../components/LoginSlider';
-import Routes from '../navigation/Routes';
-
-
-
-
-// ---------------------------------Login Screen Stacks-------------------------------------------------------
-
-
-
-const LoginStack = createNativeStackNavigator()
-
-function LoginStackScreen(){
-  return(
-    <NavigationContainer>
-    <LoginStack.Navigator>
-      <LoginStack.Screen name = "Login" component={Login} options={{headerShown:false}}/>
-      <LoginStack.Screen name = "SwiggyApp" component={Routes} options={{headerShown:false}}/>
-    </LoginStack.Navigator></NavigationContainer>
-  )
-}
-
-export default LoginStackScreen
-// -------------------------------------------------------------------------------------------------------------
 
 
 
@@ -35,13 +12,13 @@ export default LoginStackScreen
 function Login({navigation}) {
   function show(){
     SheetManager.show("loginPage")
-
-}
-
-return (
-
-  // ----------------------Login Page---------------------------------------
-  <View style={{flexDirection:"column",position:"absolute"}}>
+    
+  }
+  
+  return (
+    
+    // ----------------------Login Page---------------------------------------
+    <View style={{flexDirection:"column",position:"absolute"}}>
    
       <LoginSlider/>
    
@@ -80,3 +57,5 @@ return (
     </View>
 )
 }
+
+export default Login
