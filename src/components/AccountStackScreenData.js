@@ -1,20 +1,23 @@
- import React from "react"
+ import React, {useState} from "react"
  import{Text,View,TextInput,Button,Image} from 'react-native'
  import ImagePath from "../constants/ImagePath"
-
- 
-
+ import {useNavigation} from '@react-navigation/native'
 
 
 //  <---------------Edit Details Screen in the Acoount Tab Screen------------------->
  export function EditDetails(){
+    const navigation=useNavigation() 
+    const [UserName, setuserName] = useState('Ritika')
+    const [UserMobile, setuserMobile] = useState('9992093189')
+    const [UserEmail, setuserEmail] = useState('sainiritika591@gmail.com')
+
     return(
       <View>
-      <TextInput placeholder='enter your name' style={{borderWidth:1,borderColor:"black",marginBottom:10,borderRadius:5}}  ></TextInput>
-      <TextInput placeholder='enter your phone no.'style={{borderWidth:1,borderColor:"black",marginBottom:10,borderRadius:5}}  ></TextInput>
-      <TextInput placeholder='enter your e-mail address'style={{borderWidth:1,borderColor:"black",marginBottom:10,borderRadius:5}} ></TextInput>
+      <TextInput placeholder='enter your name' style={{borderWidth:1,borderColor:"black",marginBottom:10,borderRadius:5}}  onChange={(event)=>setuserName(event.target.value)} ></TextInput>
+      <TextInput placeholder='enter your phone no.'style={{borderWidth:1,borderColor:"black",marginBottom:10,borderRadius:5}} onChange={(event)=>setuserMobile(event.target.value)} ></TextInput>
+      <TextInput placeholder='enter your e-mail address'style={{borderWidth:1,borderColor:"black",marginBottom:10,borderRadius:5}} onChange={(event)=>setuserEmail(event.target.value)} ></TextInput>
       <View style={{justifyContent:"center",alignItems:"center",marginTop:20}}>
-      <Button title='UPDATE' color='orange'></Button>
+      <Button title='UPDATE' color='orange' onPress={()=> navigation.navigate('Account',{userName:UserName,userMobile:UserMobile,userEmail:UserEmail})} ></Button>
       </View>
       </View>
     )

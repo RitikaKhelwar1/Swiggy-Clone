@@ -1,12 +1,11 @@
-import React from 'react'
+import React , {useState}from 'react'
 import {Text,View,Image,Button,TextInput,TouchableOpacity} from 'react-native'
 import Styling from '../styles/Styling'
-import { createNativeStackNavigator } from '@react-navigation/native-stack'
-import { EditDetails,OneMemberShip,SwiggyMoney,Help, ManageAddress,Favourites } from '../components/AccountStackScreenData'
 import PaymentsRefund from '../components/PaymentsRefund'
 import MyAccount from '../components/MyAccount'
-import {Collapse,CollapseHeader, CollapseBody, AccordionList,} from 'accordion-collapse-react-native';
+import {Collapse,CollapseHeader, } from 'accordion-collapse-react-native';
 import {Divider} from 'react-native-elements/dist/divider/Divider'
+import {useNavigation} from '@react-navigation/native'
 
 
 
@@ -15,14 +14,12 @@ import {Divider} from 'react-native-elements/dist/divider/Divider'
 // function for ACCOUNT screen-------------------------->
 
 
-function AccountScreen({navigation}) {
+function AccountScreen(props) {
+
+  const {navigation,route}=props
   
-  let UserDetails = [
-    {
-      UserName:"Ritika",
-      PhoneNumber:"1234567891",
-      Email:"abc@gmail.com"
-    }]
+  console.log("params",route.params)
+  const{userName,userMobile,userEmail} = route.params
   return (
     <View style={{backgroundColor:"white"}}>
 
@@ -34,14 +31,14 @@ function AccountScreen({navigation}) {
       {/* user details */}
 
         <View style={{flex:0.7,}}>
-        <Text style={Styling.font} >{UserDetails[0].UserName.toUpperCase()}</Text>
-        <Text style={{marginLeft:10,marginTop:5}} >+91-{UserDetails[0].PhoneNumber} . {UserDetails[0].Email}</Text>
+        <Text style={Styling.font} >{userName}</Text>
+        <Text style={{marginLeft:10,marginTop:5}} >+91 {userMobile} . {userEmail}</Text>
         </View>
 
         {/*button to edit user details*/}
 
         <View style={{flex:0.3,justifyContent:"center",alignItems:"flex-end"}}>
-        <Button title='EDIT' color={"orange"} onPress={()=> navigation.navigate('EditDetails')} ></Button>
+        <Button title='EDIT' color={"orange"} onPress={()=> navigation.navigate('EditDetails')}  ></Button>
         </View>
         
        
