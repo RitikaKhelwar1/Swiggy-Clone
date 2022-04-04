@@ -15,7 +15,7 @@ import HomeStack from './HomeStack';
 export default function (Stack) {
     return (
         <>
-            <Stack.Screen name="Home" component={HomeStack} options={{headerShown:false}}/>
+            <Stack.Screen name="MainHome" component={HomeStack} options={{headerShown:false}}/>
             
         </>
     );

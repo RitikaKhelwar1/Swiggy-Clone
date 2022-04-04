@@ -9,13 +9,12 @@ import AuthStack from './AuthStack';
 
 import MainStack from './MainStack';
 const Stack = createNativeStackNavigator();
-let newState=false
- export function Naviagting(){
-  newState=true
-}
+
+
 
 export default function Routes() {
 //   const userData = useSelector(state => state?.auth?.userData);
+
 
 
   return ( 

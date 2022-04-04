@@ -18,7 +18,7 @@ function AccountScreen(props) {
 
   const {navigation,route}=props
   
-  console.log("params",route.params)
+  console.log("params",route,navigation)
   const{userName,userMobile,userEmail} = route.params
   return (
     <View style={{backgroundColor:"white"}}>
@@ -32,7 +32,7 @@ function AccountScreen(props) {
 
         <View style={{flex:0.7,}}>
         <Text style={Styling.font} >{userName}</Text>
-        <Text style={{marginLeft:10,marginTop:5}} >+91 {userMobile} . {userEmail}</Text>
+        <Text numberOfLines={1} style={{marginLeft:10,marginTop:5}} >+91 {userMobile} . {userEmail}</Text>
         </View>
 
         {/*button to edit user details*/}
