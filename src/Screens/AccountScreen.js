@@ -6,7 +6,8 @@ import MyAccount from '../components/MyAccount'
 import {Collapse,CollapseHeader, } from 'accordion-collapse-react-native';
 import {Divider} from 'react-native-elements/dist/divider/Divider'
 import {useNavigation} from '@react-navigation/native'
-
+import { useDispatch } from "react-redux"
+import { logout } from '../redux/actions/index'
 
 
 
@@ -16,9 +17,11 @@ import {useNavigation} from '@react-navigation/native'
 
 function AccountScreen(props) {
 
+  const dispatch = useDispatch()
+
   const {navigation,route}=props
   console.log("params",route)
-  const{userName,userMobile,userEmail} = route.params
+  // const{userName,userMobile,userEmail} = route.params
   return (
     <View style={{backgroundColor:"white"}}>
 
@@ -30,8 +33,8 @@ function AccountScreen(props) {
       {/* user details */}
 
         <View style={{flex:0.7,}}>
-        <Text style={Styling.font}>{userName}</Text>
-        <Text numberOfLines={1} style={{marginLeft:10,marginTop:5}} >+91 {userMobile} . {userEmail}</Text>
+        {/* <Text style={Styling.font}>{userName}</Text> */}
+        {/* <Text numberOfLines={1} style={{marginLeft:10,marginTop:5}} >+91 {userMobile} . {userEmail}</Text> */}
         </View>
 
         {/*button to edit user details*/}
@@ -97,6 +100,21 @@ function AccountScreen(props) {
     </CollapseHeader>
     </Collapse>
     </View>
+
+    {/* <------------------------------------------------------------Log out-----------------------------------------------------------------> */}
+<View>
+<Collapse>
+    <CollapseHeader>
+    <TouchableOpacity onPress={()=>dispatch(logout())}>
+      <View style={{padding:20,justifyContent:"center",borderBottomColor:"grey",borderBottomWidth:0.5}}>
+        <Text style={Styling.AccountFont}>Log Out</Text>
+      </View></TouchableOpacity>
+      
+    <Divider width={2}/>
+    </CollapseHeader>
+    </Collapse>
+    </View>
+
 
 
 

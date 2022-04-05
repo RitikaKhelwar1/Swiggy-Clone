@@ -3,9 +3,14 @@
  import ImagePath from "../constants/ImagePath"
  import {useNavigation} from '@react-navigation/native'
 
+ 
+
 
 //  <---------------Edit Details Screen in the Acoount Tab Screen------------------->
  export function EditDetails(){
+
+    
+
     const navigation=useNavigation() 
     const [UserName, setuserName] = useState('Ritika')
     const [UserMobile, setuserMobile] = useState('1234567890')

@@ -3,3 +3,9 @@ export const loginContinue = ()=>{
         type: "continue"
     }
 }
+
+export const logout = ()=>{
+    return{
+        type: "logout"
+    }
+}
