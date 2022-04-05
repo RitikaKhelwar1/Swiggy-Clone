@@ -17,8 +17,7 @@ import {useNavigation} from '@react-navigation/native'
 function AccountScreen(props) {
 
   const {navigation,route}=props
-  
-  console.log("params",route,navigation)
+  console.log("params",route)
   const{userName,userMobile,userEmail} = route.params
   return (
     <View style={{backgroundColor:"white"}}>
@@ -31,7 +30,7 @@ function AccountScreen(props) {
       {/* user details */}
 
         <View style={{flex:0.7,}}>
-        <Text style={Styling.font} >{userName}</Text>
+        <Text style={Styling.font}>{userName}</Text>
         <Text numberOfLines={1} style={{marginLeft:10,marginTop:5}} >+91 {userMobile} . {userEmail}</Text>
         </View>
 

@@ -8,8 +8,8 @@
  export function EditDetails(){
     const navigation=useNavigation() 
     const [UserName, setuserName] = useState('Ritika')
-    const [UserMobile, setuserMobile] = useState('9992093189')
-    const [UserEmail, setuserEmail] = useState('sainiritika591@gmail.com')
+    const [UserMobile, setuserMobile] = useState('1234567890')
+    const [UserEmail, setuserEmail] = useState('asdfghj@gmail.com')
 
 
 

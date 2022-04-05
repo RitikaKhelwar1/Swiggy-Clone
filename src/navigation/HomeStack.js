@@ -10,21 +10,16 @@ const Stack= createNativeStackNavigator()
 function HomeStack() {
   return (
     <Stack.Navigator>
-      <Stack.Screen
-        name="Home"
-        component={Tabs}
-        options={{headerShown: false}}
-        
-      />
+      <Stack.Screen name="Home" component={Tabs} options={{headerShown: false}}/>
       <Stack.Screen name="Offers" component={Offers}  />
-            <Stack.Screen name="HomeLocation" component={HomeLocation} options={{headerBackButtonMenuEnabled:false,headerTransparent:true,headerTitle:""}} />
-            <Stack.Screen name="SwiggyOne" component={OneMemberShip} />
-            <Stack.Screen name="EditDetails" component={EditDetails} />
-            <Stack.Screen name="ManageAddress" component={ManageAddress} />
-            <Stack.Screen name="Favourites" component={Favourites} />
-            <Stack.Screen name="OneMemberShip" component={OneMemberShip} />
-            <Stack.Screen name="SwiggyMoney" component={SwiggyMoney} />
-            <Stack.Screen name="Help" component={Help} />
+      <Stack.Screen name="HomeLocation" component={HomeLocation} options={{headerBackButtonMenuEnabled:false,headerTransparent:true,headerTitle:""}} />
+      <Stack.Screen name="SwiggyOne" component={OneMemberShip} />
+      <Stack.Screen name="EditDetails" component={EditDetails} />
+      <Stack.Screen name="ManageAddress" component={ManageAddress} />
+      <Stack.Screen name="Favourites" component={Favourites} />
+      <Stack.Screen name="OneMemberShip" component={OneMemberShip} />
+      <Stack.Screen name="SwiggyMoney" component={SwiggyMoney} />
+      <Stack.Screen name="Help" component={Help} />
     </Stack.Navigator>
   )
 }

@@ -5,6 +5,8 @@ import { Text, View, TextInput, TouchableOpacity, Button } from 'react-native'
 import ActionSheet, { SheetManager } from "react-native-actions-sheet";
 import LoginSlider from '../components/LoginSlider';
 import { useState } from 'react';
+import {useDispatch} from "react-redux"
+import {loginContinue} from "../actions/index"
 
 
 
@@ -12,6 +14,9 @@ import { useState } from 'react';
 
 // -------------------------Function for the login page Jsx and to navigate to Swiggy Home Page-------------------------------------- 
 function Login({navigation}) {
+
+  const dispatch = useDispatch();
+
   function show(){
     SheetManager.show("loginPage")
     
@@ -52,7 +57,7 @@ function Login({navigation}) {
        <View  style={{marginTop:10}}>
 
 {/* -----------------------------Button------------------------------- */}
-       <Button  title="CONTINUE" color={"orange"}   ></Button></View>
+       <Button  title="continue"  color={"orange"}  onPress={() => dispatch(loginContinue())} ></Button></View>
        
        
        <Text style={{fontSize:13,marginTop:15,textAlign:"center"}} >By clicking, I accept the Terms {`&`} Conditions {`&`} Privacy Policy</Text>
