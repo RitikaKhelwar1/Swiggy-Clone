@@ -6,7 +6,7 @@ import ActionSheet, { SheetManager } from "react-native-actions-sheet";
 import LoginSlider from '../components/LoginSlider';
 import { useState } from 'react';
 import {useDispatch} from "react-redux"
-import {loginContinue} from "../actions/index"
+import {loginContinue} from "../redux/actions/index"
 
 
 
