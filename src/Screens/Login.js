@@ -23,9 +23,7 @@ function Login({navigation}) {
   }
 
   const [MobileNumber, setMobileNumber] = useState("")
-  function Mobile(event){
-    setMobileNumber(event)
-  }
+  
 
   
   
@@ -52,7 +50,7 @@ function Login({navigation}) {
        <Text>Enter your phone number to proceed</Text>
        <Text style={{fontSize:10,marginTop:10}}>10 digit mobile number</Text>
        <View style={{borderBottomColor:"orange",borderBottomWidth:2,}}>
-       <TextInput placeholder='enter ten digit number'onChange={Mobile} keyboardType="numeric">+91 {MobileNumber}</TextInput>
+       <TextInput placeholder='enter ten digit number' keyboardType="numeric">+91 {MobileNumber}</TextInput>
        </View>
        <View  style={{marginTop:10}}>
 
