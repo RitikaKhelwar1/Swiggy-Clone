@@ -1,7 +1,6 @@
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import React, {useState} from 'react';
-import UserData from '../constants/UserData';
 import { useSelector } from 'react-redux';
 
 // import {useSelector} from 'react-redux';

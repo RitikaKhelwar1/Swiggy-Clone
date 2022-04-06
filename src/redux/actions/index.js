@@ -1,11 +1,13 @@
+import types from "../types"
+
 export const loginContinue = ()=>{
     return{
-        type: "continue"
+        type: types.LOGIN
     }
 }
 
 export const logout = ()=>{
     return{
-        type: "logout"
+        type: types.USER_LOGOUT
     }
 }
