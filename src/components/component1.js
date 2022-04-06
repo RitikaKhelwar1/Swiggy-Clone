@@ -12,10 +12,10 @@ function Component1({navigation}) {
   return (
     <View>
    
-     <TouchableOpacity style={[styling.Component1, {flexDirection:"row"}]} onPress={()=>navigation.navigate('SwiggyOne')}>
-       <View style={[styling.GeneralComponent,{flex:0.2,justifyContent:"center",alignItems:"center"}]}>
+     <TouchableOpacity style={styling.Component1} onPress={()=>navigation.navigate('SwiggyOne')}>
+       <View style={[styling.GeneralComponent,styling.Component1View]}>
        <Image style={styling.Component1Image}source={ImagePath.one}></Image></View>
-    <View style={{flex:0.8,justifyContent:"center",alignItems:"flex-start",}}><Text style={{fontSize:16}}>Get unlimited benefits @ Rs75/month on Restaurants {`&`} Genie {`>>`} </Text>
+    <View style={styling.Component1View2}><Text style={styling.Component1Text}>Get unlimited benefits @ Rs75/month on Restaurants {`&`} Genie {`>>`} </Text>
     </View>
     </TouchableOpacity>
     <View style={styling.compo1}>

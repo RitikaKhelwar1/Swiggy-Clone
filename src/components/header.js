@@ -9,10 +9,9 @@ import Styling from '../styles/Styling'
 
 function Header({navigation}) {
   return (
-   <View style={{flexDirection:"row",borderBottomWidth:0.2,
-   borderBottomColor:"grey"}}>
+   <View style={Styling.header}>
       <StatusBar barStyle='dark-content' backgroundColor={"transparent"}  ></StatusBar>
-      <TouchableHighlight underlayColor={"whitesmoke"} onPress={()=> navigation.navigate('HomeLocation')} style={{flexDirection:'column',paddingHorizontal:10,paddingBottom:15,flex: 0.75 }}>
+      <TouchableHighlight underlayColor={"whitesmoke"} onPress={()=> navigation.navigate('HomeLocation')} style={Styling.HomeLocation}>
         <View >
       
         <View style={{ flexDirection: 'row' }}>
@@ -27,9 +26,9 @@ function Header({navigation}) {
 
 
     </View></TouchableHighlight>
-    <TouchableHighlight underlayColor={"whitesmoke"} onPress={()=> navigation.navigate('Offers')} style={{ flex: 0.25 ,paddingHorizontal:5,justifyContent:'center'}}><View style={{flexDirection:"row",alignItems:'center',alignContent:"center",justifyContent:"flex-end"}}>
-        <Image source={ImagePath.offer} style={[Styling.headerLogo,{marginRight:5}]} ></Image>
-        <Text style={{fontWeight: "bold",color: "grey",fontSize: 17,marginRight:5}}>Offers</Text>
+    <TouchableHighlight underlayColor={"whitesmoke"} onPress={()=> navigation.navigate('Offers')} style={Styling.Offers}><View style={Styling.OffersView}>
+        <Image source={ImagePath.offer} style={Styling.headerLogo} ></Image>
+        <Text style={Styling.OffersText}>Offers</Text>
       </View></TouchableHighlight>
     </View>
     

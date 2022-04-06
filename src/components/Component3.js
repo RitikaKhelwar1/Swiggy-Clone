@@ -5,7 +5,7 @@ import Styling from '../styles/Styling'
 
 function Component3() {
   return (
-    <View style={[Styling.Component3,{flexDirection:'row',paddingHorizontal:10,alignItems:"flex-start",}]}>
+    <View style={Styling.Component3}>
       <View style={{flex:0.05}} >
       <Image source={ImagePath.thumbsUp} style={Styling.headerLogo} ></Image>
       </View>
