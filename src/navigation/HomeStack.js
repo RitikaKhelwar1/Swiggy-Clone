@@ -1,7 +1,6 @@
 import React from 'react'
 import Tabs from './Tabs'
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import Home from '../Screens/Home';
 import { Offers,HomeLocation } from '../components/HomeStackScreenData';
 import { EditDetails,ManageAddress, Favourites, SwiggyMoney, Help ,OneMemberShip} from '../components/AccountStackScreenData';
 

@@ -1,15 +1,9 @@
-
-
-import React from 'react'
-
 import { StyleSheet } from "react-native"
 
 export default StyleSheet.create({
     MainContainer: {
         flex: 1,
         backgroundColor:"white",
-        // padding:20
-        // flexWrap:"wrap"
 
     },
     Component1: {
@@ -77,8 +71,6 @@ export default StyleSheet.create({
 
     },
     Component3: {
-        // borderRadius:5,
-        // justifyContent:"space-around",
         margin: 10,
         marginTop: 5,
         padding: 10
@@ -91,10 +83,9 @@ export default StyleSheet.create({
         
     },
     Component4: {
-        // margin: 5,
+      
         marginTop: 5,
-        // marginBottom:10
-    
+       
     },
     SubComponent4Img:{
         height: 100,

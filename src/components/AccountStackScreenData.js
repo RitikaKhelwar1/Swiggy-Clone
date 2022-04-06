@@ -12,9 +12,15 @@
     
 
     const navigation=useNavigation() 
-    const [UserName, setuserName] = useState('Ritika')
-    const [UserMobile, setuserMobile] = useState('1234567890')
-    const [UserEmail, setuserEmail] = useState('asdfghj@gmail.com')
+    const [userName, setuserName] = useState('Ritika')
+    const [userMobile, setuserMobile] = useState('1234567890')
+    const [userEmail, setuserEmail] = useState('asdfghj@gmail.com')
+
+    const updatedDetails={
+        userName:userName,
+        userMobile:userMobile,
+        userEmail:userEmail
+    }
 
 
 
@@ -24,7 +30,7 @@
       <TextInput placeholder='enter your phone no.'style={{borderWidth:1,borderColor:"black",marginBottom:10,borderRadius:5}} keyboardType="numeric" onChangeText={(event)=>setuserMobile(event)} ></TextInput>
       <TextInput placeholder='enter your e-mail address'style={{borderWidth:1,borderColor:"black",marginBottom:10,borderRadius:5}} keyboardType='email-address' onChangeText={(event)=>setuserEmail(event)} ></TextInput>
       <View style={{justifyContent:"center",alignItems:"center",marginTop:20}}>
-      <Button title='UPDATE' color='orange' onPress={()=> navigation.navigate('Account',{userName:UserName,userMobile:UserMobile,userEmail:UserEmail})} ></Button>
+      <Button title='UPDATE' color='orange' onPress={()=> navigation.navigate('Account',updatedDetails)} ></Button>
       </View>
       </View>
     )

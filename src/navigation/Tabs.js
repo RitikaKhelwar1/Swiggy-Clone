@@ -1,10 +1,10 @@
 import React from 'react'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
-import SwiggyHome from '../Screens/Home'
-import Search from '../Screens/Search'
-import Cart from '../Screens/Cart'
+import SwiggyHome from '../Screens/Home/Home'
+import Search from '../Screens/Search/Search'
+import Cart from '../Screens/Cart/Cart'
 import {Image,} from 'react-native'
-import AccountScreen from '../Screens/AccountScreen'
+import AccountScreen from '../Screens/UserAccount/AccountScreen'
 import ImagePath from '../constants/ImagePath'
 
 const Tab = createBottomTabNavigator();

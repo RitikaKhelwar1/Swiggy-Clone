@@ -9,7 +9,7 @@ function SubComponent3() {
        
       <FlatList horizontal={true} showsHorizontalScrollIndicator={false} data={TopPick} renderItem={(element)=>{
           return(
-              <View>
+              <View style={{marginBottom:10}}>
               <TouchableOpacity><View style={{flexDirection:"row"}}>
         <Image style={Styling.SubComponent3Img} source={element.item.uri}></Image></View></TouchableOpacity>
         <Text  style={{textAlign:"center"}}>{element.item.text}</Text>

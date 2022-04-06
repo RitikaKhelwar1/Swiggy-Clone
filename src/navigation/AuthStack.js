@@ -1,10 +1,5 @@
 import React from 'react';
-// import { useSelector } from 'react-redux';
-// import LogingPage from '../Screen/loginPage/LogingPage';
-// import Signuppage from '../Screen/signup/Signuppage';
-
-// import navigationStrings from './navigationStrings';
-import Login from '../Screens/Login';
+import Login from '../Screens/Login/Login';
 
 export default function (Stack) {
     return (

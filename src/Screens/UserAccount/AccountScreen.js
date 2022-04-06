@@ -1,13 +1,13 @@
-import React , {useState}from 'react'
+import React from 'react'
 import {Text,View,Image,Button,TextInput,TouchableOpacity} from 'react-native'
-import Styling from '../styles/Styling'
-import PaymentsRefund from '../components/PaymentsRefund'
-import MyAccount from '../components/MyAccount'
+import Styling from '../../styles/Styling'
+import PaymentsRefund from '../../components/PaymentsRefund'
+import MyAccount from '../../components/MyAccount'
 import {Collapse,CollapseHeader, } from 'accordion-collapse-react-native';
 import {Divider} from 'react-native-elements/dist/divider/Divider'
-import {useNavigation} from '@react-navigation/native'
 import { useDispatch } from "react-redux"
-import { logout } from '../redux/actions/index'
+import { logout } from '../../redux/actions/index'
+import styles from './styles'
 
 
 
@@ -23,23 +23,23 @@ function AccountScreen(props) {
   console.log("params",route)
   // const{userName,userMobile,userEmail} = route.params
   return (
-    <View style={{backgroundColor:"white"}}>
+    <View style={styles.Account}>
 
   
 
       {/* <----- user details ----->*/}
       
-      <View style={{flexDirection:"row",borderBottomWidth:2,borderBottomColor:"black",paddingVertical:25,}}>
+      <View style={styles.UserView}>
       {/* user details */}
 
-        <View style={{flex:0.7,}}>
+        <View style={styles.DetailsView}>
         {/* <Text style={Styling.font}>{userName}</Text> */}
         {/* <Text numberOfLines={1} style={{marginLeft:10,marginTop:5}} >+91 {userMobile} . {userEmail}</Text> */}
         </View>
 
         {/*button to edit user details*/}
 
-        <View style={{flex:0.3,justifyContent:"center",alignItems:"flex-end"}}>
+        <View style={styles.Btn}>
         <Button title='EDIT' color={"orange"} onPress={()=> navigation.navigate('EditDetails')}  ></Button>
         </View>
         
@@ -61,9 +61,9 @@ function AccountScreen(props) {
 
     <CollapseHeader>
    <TouchableOpacity onPress={()=>navigation.navigate('OneMemberShip')}>
-      <View style={{padding:20,justifyContent:"center",borderBottomColor:"grey",borderBottomWidth:0.5}}>
-        <Text style={{fontWeight: "bold",color: "indianred",fontSize: 20,}}>ONE <Text style={Styling.AccountFont}>membership</Text></Text>
-        <Text style={{fontSize:13}}>Get unlimited Free Delivery {`&`} Extra Discounts with Swiggy One. Buy @ Rs75/month </Text>
+      <View style={styles.GenView}>
+        <Text style={styles.OneText1}>ONE <Text style={Styling.AccountFont}>membership</Text></Text>
+        <Text style={styles.Text2}>Get unlimited Free Delivery {`&`} Extra Discounts with Swiggy One. Buy @ Rs75/month </Text>
       </View>
       </TouchableOpacity>
       
@@ -77,9 +77,9 @@ function AccountScreen(props) {
 <Collapse>
     <CollapseHeader>
     <TouchableOpacity onPress={()=>navigation.navigate('SwiggyMoney')}>
-      <View style={{padding:20,justifyContent:"center",borderBottomColor:"grey",borderBottomWidth:0.5}}>
+      <View style={styles.GenView}>
         <Text style={Styling.AccountFont}>Swiggy Money</Text>
-        <Text style={{fontSize:13}}>View Acoount Balance {`&`} Transactions History</Text>
+        <Text style={styles.Text2}>View Acoount Balance {`&`} Transactions History</Text>
       </View></TouchableOpacity>
       
     <Divider width={2}/>
@@ -91,9 +91,9 @@ function AccountScreen(props) {
 <Collapse>
     <CollapseHeader>
     <TouchableOpacity onPress={()=>navigation.navigate('Help')}>
-      <View style={{padding:20,justifyContent:"center",borderBottomColor:"grey",borderBottomWidth:0.5}}>
+      <View style={styles.GenView}>
         <Text style={Styling.AccountFont}>Help</Text>
-        <Text style={{fontSize:13}}>FAQs {`&`} Links</Text>
+        <Text style={styles.Text2}>FAQs {`&`} Links</Text>
       </View></TouchableOpacity>
       
     <Divider width={2}/>
@@ -106,7 +106,7 @@ function AccountScreen(props) {
 <Collapse>
     <CollapseHeader>
     <TouchableOpacity onPress={()=>dispatch(logout())}>
-      <View style={{padding:20,justifyContent:"center",borderBottomColor:"grey",borderBottomWidth:0.5}}>
+      <View style={styles.GenView}>
         <Text style={Styling.AccountFont}>Log Out</Text>
       </View></TouchableOpacity>
       

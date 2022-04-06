@@ -11,7 +11,7 @@ function LoginSlider() {
             <View
                 style={{
                    flex:0.5,
-                    backgroundColor: '#febe29',
+                    backgroundColor: '#fa7743',
                     alignItems: 'center',
                     justifyContent: 'flex-start',
                     padding:50
