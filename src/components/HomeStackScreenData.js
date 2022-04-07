@@ -1,10 +1,6 @@
 import React, { useState } from 'react'
 import { Text, View, TextInput, TouchableOpacity, Button ,Image,SafeAreaView,
     StyleSheet,} from 'react-native'
-import ActionSheet, { SheetManager } from "react-native-actions-sheet";
-import data from './data';
-import AppIntroSlider from 'react-native-app-intro-slider';
-import BrandData from './BrandData';
 
 
 

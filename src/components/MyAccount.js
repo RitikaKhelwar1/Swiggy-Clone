@@ -13,7 +13,7 @@ function MyAccount({navigation}) {
 <Collapse  >
     <CollapseHeader>
    
-      <View style={{padding:20,justifyContent:"center",borderBottomColor:"grey",borderBottomWidth:0.5}}>
+      <View style={Styling.MyAccountContainer}>
         <Text style={Styling.AccountFont}>My Account</Text>
         <Text style={{fontSize:13}}>Addresses, Favourites, Offers, {`&`} Settings </Text>
       </View>
@@ -25,7 +25,7 @@ function MyAccount({navigation}) {
     {/* <----------------manage address-----------------> */}
     <CollapseHeader>
    
-    <TouchableOpacity onPress={()=>navigation.navigate('ManageAddress')}><View style={{padding:20,justifyContent:"center",borderBottomColor:"grey",borderBottomWidth:0.5}}>
+    <TouchableOpacity onPress={()=>navigation.navigate('ManageAddress')}><View style={Styling.MyAccountContainer}>
         <Text style={{fontSize:13}}>Manage Address</Text>
       </View></TouchableOpacity>
       
@@ -33,7 +33,7 @@ function MyAccount({navigation}) {
     {/* <-------------------Favourites------------------> */}
     <CollapseHeader>
    
-    <TouchableOpacity onPress={()=> navigation.navigate('Favourites')} ><View style={{padding:20,justifyContent:"center",borderBottomColor:"grey",borderBottomWidth:0.5}}>
+    <TouchableOpacity onPress={()=> navigation.navigate('Favourites')} ><View style={Styling.MyAccountContainer}>
      <Text style={{fontSize:13}}>Favourites</Text>
       </View></TouchableOpacity>
       
@@ -41,7 +41,7 @@ function MyAccount({navigation}) {
     {/* <----------------Offers------------------------> */}
     <CollapseHeader>
    
-    <TouchableOpacity><View style={{padding:20,justifyContent:"center",borderBottomColor:"grey",borderBottomWidth:0.5}}>
+    <TouchableOpacity><View style={Styling.MyAccountContainer}>
       <Text style={{fontSize:13}}>Offers</Text>
       </View></TouchableOpacity>
       
@@ -49,7 +49,7 @@ function MyAccount({navigation}) {
     {/* <------------------Settings---------------------> */}
     <CollapseHeader>
    
-    <TouchableOpacity><View style={{padding:20,justifyContent:"center",borderBottomColor:"grey",borderBottomWidth:0.5}}>
+    <TouchableOpacity><View style={Styling.MyAccountContainer}>
      <Text style={{fontSize:13}}>Settings</Text>
       </View></TouchableOpacity>
       

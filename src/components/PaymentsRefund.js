@@ -14,7 +14,7 @@ function PaymentsRefund({navigation}) {
 <Collapse>
     <CollapseHeader>
    
-      <View style={{padding:20,justifyContent:"center",borderBottomColor:"grey",borderBottomWidth:0.5}}>
+      <View style={Styling.MyAccountContainer}>
         <Text style={Styling.AccountFont}>Payements {`&`} Refunds</Text>
         <Text style={{fontSize:13}}>Refund Status {`&`} Payment Modes </Text>
       </View>
@@ -26,7 +26,7 @@ function PaymentsRefund({navigation}) {
     {/* <----------------Refund Status-----------------> */}
     <CollapseHeader>
    
-    <TouchableOpacity onPress={()=>navigation.navigate('OneMemberShip')} ><View style={{padding:20,justifyContent:"center",borderBottomColor:"grey",borderBottomWidth:0.5}}>
+    <TouchableOpacity onPress={()=>navigation.navigate('OneMemberShip')} ><View style={Styling.MyAccountContainer}>
         <Text style={{fontSize:13}}>Refund Status</Text>
       </View></TouchableOpacity>
       
@@ -34,7 +34,7 @@ function PaymentsRefund({navigation}) {
     {/* <-------------------Payment Modes------------------> */}
     <CollapseHeader>
    
-    <TouchableOpacity><View style={{padding:20,justifyContent:"center",borderBottomColor:"grey",borderBottomWidth:0.5}}>
+    <TouchableOpacity><View style={Styling.MyAccountContainer}>
      <Text style={{fontSize:13}}>Payment Modes</Text>
       </View></TouchableOpacity>
       

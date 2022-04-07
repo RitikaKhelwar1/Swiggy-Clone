@@ -6,20 +6,20 @@ import Styling from '../styles/Styling'
 function Instamart() {
   return (
    <View>
-       <TouchableOpacity><View style={{flexDirection:"row",borderBottomColor:"purple",borderBottomWidth:2}}>
-            <View style={[{flex:0.5},Styling.Instamart,{alignItems:"flex-start",justifyContent:"flex-end"}]}>
-                <Text style={{fontWeight:"bold",fontSize:30,color:"purple"}} >Instamart</Text>
+       <TouchableOpacity><View style={Styling.InstaView1}>
+            <View style={[Styling.Instamart,Styling.InstaView2]}>
+                <Text style={Styling.IText1} >Instamart</Text>
                 </View>
-            <View style={[{flex:0.5},Styling.Instamart,{alignItems:"flex-end",justifyContent:"flex-end"}]} >
-                <Text style={{color:"purple",fontSize:10}}>GROCERY DELIVERED</Text>
-                <Text style={{color:"purple",fontWeight:"bold"}}>IN  M I N U T E S</Text>
+            <View style={[Styling.Instamart,Styling.InstaView2]} >
+                <Text style={Styling.IText2}>GROCERY DELIVERED</Text>
+                <Text style={Styling.IText3}>IN  M I N U T E S</Text>
             </View>
        </View></TouchableOpacity>
        <TouchableOpacity><View style={Styling.InstamartOff}>
-            <Image source={ImagePath.InstamartOff} style={{width:400,borderRadius:15,height:180}} ></Image>
+            <Image source={ImagePath.InstamartOff} style={Styling.InstaImg} ></Image>
        </View></TouchableOpacity>
        <View></View>
-       <View style={{marginTop:10,borderRadius:50,marginHorizontal:20,}}>
+       <View style={Styling.InstaBtn}>
            <Button title='Browse more on Instamart' color={"purple"}/>
        </View>
    </View>

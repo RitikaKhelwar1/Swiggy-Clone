@@ -84,6 +84,23 @@ export default StyleSheet.create({
     },
     // -------------------------------------
 
+// --------------comppnent 4--------------------
+    Component3: {
+        margin: 10,
+        marginTop: 5,
+        padding: 10,
+        flexDirection: 'row',
+        paddingHorizontal: 10,
+        alignItems: "flex-start",
+    },
+    SubComponent3Img: {
+        height: 90,
+        width: 80,
+        marginLeft: 15,
+        borderRadius: 15,
+
+    },
+// -------------------------------------------------
     // ------------------header------------------------>
     header: {
         flexDirection: "row",
@@ -121,21 +138,7 @@ export default StyleSheet.create({
         marginRight:5
     },
 
-    Component3: {
-        margin: 10,
-        marginTop: 5,
-        padding: 10,
-        flexDirection: 'row',
-        paddingHorizontal: 10,
-        alignItems: "flex-start",
-    },
-    SubComponent3Img: {
-        height: 90,
-        width: 80,
-        marginLeft: 15,
-        borderRadius: 15,
-
-    },
+    //-----------------------------------component 4------------>
     Component4: {
 
         marginTop: 5,
@@ -148,11 +151,43 @@ export default StyleSheet.create({
         borderRadius: 70,
 
     },
+    
+    // -------------------------Instamart------------------------->
+    InstaView1:{
+        flexDirection:"row",
+        borderBottomColor:"purple",
+        borderBottomWidth:2
+    },
+    InstaView2: {
+        flex:0.5,
+        alignItems:"flex-start",
+        justifyContent:"flex-end"
+    },
+    IText1:{
+        fontWeight:"bold",
+        fontSize:30,
+        color:"purple"
+    },
+    IText2:{
+        color:"purple",
+        fontSize:10
+    },
+    IText3:{
+        color:"purple",
+        fontWeight:"bold"
+    },
+    InstaImg:{
+        width:400,
+        borderRadius:15,
+        height:180
+    },
+
     Instamart: {
         margin: 10,
         marginTop: 5,
         padding: 10
     },
+
     InstamartOff: {
 
         marginTop: 10,
@@ -161,6 +196,42 @@ export default StyleSheet.create({
         alignSelf: "center",
         alignItems: "stretch"
     },
+    InstaBtn:{
+        marginTop:10,
+        borderRadius:50,
+        marginHorizontal:20,
+    },
+    // ----------------------------------------------
+    // ------------Brands---------------------------
+    BrandContainer:{
+        flex:0.7,
+        flexDirection:"row",
+        justifyContent:"flex-end",
+        borderBottomWidth:1,
+        borderBottomColor:"grey"
+    },
+    CardContainer:{
+        flex:0.5,
+        justifyContent:"flex-start",
+        alignItems:"center"
+    },
+    CardText:{
+        fontWeight:"bold",
+        textAlign:"center",
+        fontSize:12
+    },
+    CardText2:{
+        textAlign:"center",
+        fontSize:8
+    },
+    CardImgContainer:{
+        flex:0.7,
+        flexDirection:"row",
+        justifyContent:"flex-end",
+        borderBottomWidth:1,
+        borderBottomColor:"grey"
+    },
+
     BrandCardImg: {
         height: 35,
         width: 35,
@@ -198,6 +269,60 @@ export default StyleSheet.create({
         color: "black",
         fontSize: 17,
 
+    },
+
+    // -----------------Login Slider-------------------
+    LoginSlider:{
+        flex:0.5,
+         backgroundColor: '#fa7743',
+         alignItems: 'center',
+         justifyContent: 'flex-start',
+         padding:50
+     },
+
+    container: {
+        flex: 1,
+        backgroundColor: '#fff',
+        alignItems: 'center',
+        padding: 10,
+        justifyContent: 'center',
+    },
+    titleStyle: {
+        padding: 10,
+        textAlign: 'center',
+        fontSize: 18,
+        fontWeight: 'bold',
+    },
+    paragraphStyle: {
+        padding: 20,
+        textAlign: 'center',
+        fontSize: 16,
+    },
+    introImageStyle: {
+        width: 200,
+        height: 200,
+    },
+    introTextStyle: {
+        fontSize: 18,
+        color: 'white',
+        textAlign: 'center',
+        paddingVertical: 30,
+    },
+    introTitleStyle: {
+        fontSize: 25,
+        color: 'white',
+        textAlign: 'center',
+        marginBottom: 16,
+        fontWeight: 'bold',
+    },
+
+    // --------------My account------------
+
+    MyAccountContainer:{
+        padding:20,
+        justifyContent:"center",
+        borderBottomColor:"grey",
+        borderBottomWidth:0.5
     },
 
 
