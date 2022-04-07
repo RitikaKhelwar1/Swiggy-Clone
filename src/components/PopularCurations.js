@@ -1,7 +1,7 @@
 import React from 'react'
 import {Text, Image, FlatList, View, ScrollView,Dimensions,TouchableOpacity} from 'react-native'
 import Styling from '../styles/Styling'
-import TopPick from './TopPick'
+import TopPick from '../constants/TopPick'
 
 
 function PopularCurations() {

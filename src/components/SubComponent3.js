@@ -1,7 +1,7 @@
 import React from 'react'
 import{ Text,View,FlatList,Image,TouchableOpacity} from 'react-native'
 import Styling from '../styles/Styling'
-import TopPick from './TopPick'
+import TopPick from '../constants/TopPick'
 
 function SubComponent3() {
   return (

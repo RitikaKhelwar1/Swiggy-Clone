@@ -5,7 +5,7 @@ import {
 } from 'react-native'
 import AppIntroSlider from 'react-native-app-intro-slider';
 import Styling from '../styles/Styling';
-import slides from './LoginSliderData'
+import slides from '../constants/LoginSliderData'
 
 function LoginSlider() {
     const RenderItem = ({ item }) => {
