@@ -1,10 +1,10 @@
-import React from 'react'
-import {Text,View,Image,Button,TextInput,TouchableOpacity} from 'react-native'
+import React, {useState} from 'react'
+import { Text, View, Image, Button, TextInput, TouchableOpacity } from 'react-native'
 import Styling from '../../styles/Styling'
 import PaymentsRefund from '../../components/PaymentsRefund'
 import MyAccount from '../../components/MyAccount'
-import {Collapse,CollapseHeader, } from 'accordion-collapse-react-native';
-import {Divider} from 'react-native-elements/dist/divider/Divider'
+import { Collapse, CollapseHeader, } from 'accordion-collapse-react-native';
+import { Divider } from 'react-native-elements/dist/divider/Divider'
 import { useDispatch } from "react-redux"
 import { logout } from '../../redux/actions/index'
 import styles from './styles'
@@ -15,105 +15,103 @@ import styles from './styles'
 // function for ACCOUNT screen-------------------------->
 
 
-function AccountScreen(props) {
+function AccountScreen({ navigation, route }) {
 
   const dispatch = useDispatch()
-
-  const {navigation,route}=props
-  console.log("params",route)
-  // const{userName,userMobile,userEmail} = route.params
+  const [UserName, setUserName] = useState('Ritika')
+  const [UserMobile, setUserMobile] = useState('1234567890')
+  const [UserEmail, setUserEmail] = useState('asdfghj@gmail.com')
+  console.log("routes", route)
+  const data = route?.params
   return (
     <View style={styles.Account}>
-
-  
-
       {/* <----- user details ----->*/}
-      
+
       <View style={styles.UserView}>
-      {/* user details */}
+        {/* user details */}
 
         <View style={styles.DetailsView}>
-        {/* <Text style={Styling.font}>{userName}</Text> */}
-        {/* <Text numberOfLines={1} style={{marginLeft:10,marginTop:5}} >+91 {userMobile} . {userEmail}</Text> */}
+          <Text style={Styling.font}>{data? data?.userName: UserName}</Text>
+          <Text numberOfLines={1} style={{ marginLeft: 10, marginTop: 5 }} >{data ? `+91 ${data?.userMobile} . ${data?.userEmail}` : `+91 ${UserMobile} . ${UserEmail}`}</Text>
         </View>
 
         {/*button to edit user details*/}
 
         <View style={styles.Btn}>
-        <Button title='EDIT' color={"orange"} onPress={()=> navigation.navigate('EditDetails')}  ></Button>
+          <Button title='EDIT' color={"orange"} onPress={() => navigation.navigate('EditDetails')}  ></Button>
         </View>
-        
-       
+
+
 
       </View>
 
 
-{/* ---------------------------------------------accordion-collapse for Account Screen--------------------------------------------------------------- */}
-{/* // <-------------------------------------------------My Account------------------------------------------------------------------> */}
-<MyAccount navigation={navigation} />
-  
-{/* <----------------------------------------------------------payements and refunds---------------------------------------------------> */}
-<PaymentsRefund navigation={navigation}/>
+      {/* ---------------------------------------------accordion-collapse for Account Screen--------------------------------------------------------------- */}
+      {/* // <-------------------------------------------------My Account------------------------------------------------------------------> */}
+      <MyAccount navigation={navigation} />
 
-{/* <-----------------------------------------------------------one membership--------------------------------------------------------> */}
-<View>
-<Collapse>
+      {/* <----------------------------------------------------------payements and refunds---------------------------------------------------> */}
+      <PaymentsRefund navigation={navigation} />
 
-    <CollapseHeader>
-   <TouchableOpacity onPress={()=>navigation.navigate('OneMemberShip')}>
-      <View style={styles.GenView}>
-        <Text style={styles.OneText1}>ONE <Text style={Styling.AccountFont}>membership</Text></Text>
-        <Text style={styles.Text2}>Get unlimited Free Delivery {`&`} Extra Discounts with Swiggy One. Buy @ Rs75/month </Text>
+      {/* <-----------------------------------------------------------one membership--------------------------------------------------------> */}
+      <View>
+        <Collapse>
+
+          <CollapseHeader>
+            <TouchableOpacity onPress={() => navigation.navigate('OneMemberShip')}>
+              <View style={styles.GenView}>
+                <Text style={styles.OneText1}>ONE <Text style={Styling.AccountFont}>membership</Text></Text>
+                <Text style={styles.Text2}>Get unlimited Free Delivery {`&`} Extra Discounts with Swiggy One. Buy @ Rs75/month </Text>
+              </View>
+            </TouchableOpacity>
+
+            <Divider width={2} />
+          </CollapseHeader>
+        </Collapse>
       </View>
-      </TouchableOpacity>
-      
-    <Divider width={2}/>
-    </CollapseHeader>
-    </Collapse>
-    </View>
 
-    {/* <---------------------------------------------------------Swiggy Money-----------------------------------------------------------> */}
-    <View>
-<Collapse>
-    <CollapseHeader>
-    <TouchableOpacity onPress={()=>navigation.navigate('SwiggyMoney')}>
-      <View style={styles.GenView}>
-        <Text style={Styling.AccountFont}>Swiggy Money</Text>
-        <Text style={styles.Text2}>View Acoount Balance {`&`} Transactions History</Text>
-      </View></TouchableOpacity>
-      
-    <Divider width={2}/>
-    </CollapseHeader>
-    </Collapse>
-    </View>
-    {/* <------------------------------------------------------------help-----------------------------------------------------------------> */}
-<View>
-<Collapse>
-    <CollapseHeader>
-    <TouchableOpacity onPress={()=>navigation.navigate('Help')}>
-      <View style={styles.GenView}>
-        <Text style={Styling.AccountFont}>Help</Text>
-        <Text style={styles.Text2}>FAQs {`&`} Links</Text>
-      </View></TouchableOpacity>
-      
-    <Divider width={2}/>
-    </CollapseHeader>
-    </Collapse>
-    </View>
+      {/* <---------------------------------------------------------Swiggy Money-----------------------------------------------------------> */}
+      <View>
+        <Collapse>
+          <CollapseHeader>
+            <TouchableOpacity onPress={() => navigation.navigate('SwiggyMoney')}>
+              <View style={styles.GenView}>
+                <Text style={Styling.AccountFont}>Swiggy Money</Text>
+                <Text style={styles.Text2}>View Acoount Balance {`&`} Transactions History</Text>
+              </View></TouchableOpacity>
 
-    {/* <------------------------------------------------------------Log out-----------------------------------------------------------------> */}
-<View>
-<Collapse>
-    <CollapseHeader>
-    <TouchableOpacity onPress={()=>dispatch(logout())}>
-      <View style={styles.GenView}>
-        <Text style={Styling.AccountFont}>Log Out</Text>
-      </View></TouchableOpacity>
-      
-    <Divider width={2}/>
-    </CollapseHeader>
-    </Collapse>
-    </View>
+            <Divider width={2} />
+          </CollapseHeader>
+        </Collapse>
+      </View>
+      {/* <------------------------------------------------------------help-----------------------------------------------------------------> */}
+      <View>
+        <Collapse>
+          <CollapseHeader>
+            <TouchableOpacity onPress={() => navigation.navigate('Help')}>
+              <View style={styles.GenView}>
+                <Text style={Styling.AccountFont}>Help</Text>
+                <Text style={styles.Text2}>FAQs {`&`} Links</Text>
+              </View></TouchableOpacity>
+
+            <Divider width={2} />
+          </CollapseHeader>
+        </Collapse>
+      </View>
+
+      {/* <------------------------------------------------------------Log out-----------------------------------------------------------------> */}
+      <View>
+        <Collapse>
+          <CollapseHeader>
+            <TouchableOpacity onPress={() => dispatch(logout())}>
+              <View style={styles.GenView}>
+                <Text style={Styling.AccountFont}>Log Out</Text>
+              </View></TouchableOpacity>
+
+            <Divider width={2} />
+          </CollapseHeader>
+        </Collapse>
+      </View>
 
 
 

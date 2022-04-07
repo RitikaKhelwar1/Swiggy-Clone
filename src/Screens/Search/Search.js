@@ -23,7 +23,10 @@ function Search() {
      <View style={styles.Searches}>
      
       <Text style={[Styling.font,styles.Text]}>Recent Searches</Text>
-        <FlatList data={data}
+
+        <FlatList 
+        
+        data={data}
         renderItem={(element)=>{
           return(
             <View style={styles.FlatListView}>

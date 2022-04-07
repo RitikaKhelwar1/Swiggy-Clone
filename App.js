@@ -12,7 +12,7 @@ import { Provider } from 'react-redux';
 
 
 const App = () => {
-
+  console.log(store.getState())
   return (
 
     <SafeAreaView style={Styling.MainContainer} >

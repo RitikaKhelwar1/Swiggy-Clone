@@ -13,7 +13,7 @@ import styles from './styles';
 
 
 
-// -------------------------Function for the login page Jsx and to navigate to Swiggy Home Page-------------------------------------- 
+// -------------------------Function for the login page  and to navigate to Swiggy Home Page-------------------------------------- 
 function Login({navigation}) {
 
   const dispatch = useDispatch();
@@ -21,6 +21,7 @@ function Login({navigation}) {
   function userLogin(){
     const phoneRegex = /^[0-9]{10}$/
     if(phoneRegex.test(MobileNumber)){
+      console.log("User Mobile Number",MobileNumber)
       dispatch(loginContinue())
     }
     else{
@@ -54,7 +55,7 @@ function Login({navigation}) {
        
 
 {/* ------------------------Action sheet on login page-------------------------------------------------- */}
-        <ActionSheet id="loginPage" bounceOnOpen={true} >
+        <ActionSheet id="loginPage" bounceOnOpen={true} closeAnimationDuration={0} >
 
             <View style={styles.ActionSheet}>
             

@@ -1,8 +1,6 @@
-import React, { useState } from 'react'
+import React from 'react'
 import {
-    Text, View, TextInput, TouchableOpacity, Button, Image, SafeAreaView,
-    StyleSheet,
-} from 'react-native'
+    Text, View,Image,} from 'react-native'
 import AppIntroSlider from 'react-native-app-intro-slider';
 import Styling from '../styles/Styling';
 import slides from '../constants/LoginSliderData'

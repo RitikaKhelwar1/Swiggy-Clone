@@ -12,7 +12,7 @@ function HomeStack() {
     <Stack.Navigator>
       <Stack.Screen name={NavStr.HOME} component={Tabs} options={{headerShown: false}}/>
       <Stack.Screen name={NavStr.OFFERS} component={Offers}  />
-      <Stack.Screen name={NavStr.HOME_LOCATION} component={HomeLocation} options={{headerBackButtonMenuEnabled:false,}} />
+      <Stack.Screen name={NavStr.HOME_LOCATION} component={HomeLocation} options={{headerShown:true,}} />
       <Stack.Screen name={NavStr.SWIGGY_ONE} component={OneMemberShip} />
       <Stack.Screen name={NavStr.EDIT_DETAILS} component={EditDetails} />
       <Stack.Screen name={NavStr.MANAGE_ADDRESSES} component={ManageAddress} />
