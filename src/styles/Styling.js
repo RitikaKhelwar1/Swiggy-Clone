@@ -250,6 +250,8 @@ export default StyleSheet.create({
         marginTop: 10
 
     },
+    // ------------------------------------------
+    // -------------Footer-------------------->
     Footer: {
         justifyContent: "space-around",
         alignItems: "center",
@@ -263,13 +265,9 @@ export default StyleSheet.create({
         width: 25,
         height: 25
     },
-    AccountFont: {
+// ------------------------------------------
 
-        fontWeight: "bold",
-        color: "black",
-        fontSize: 17,
-
-    },
+   
 
     // -----------------Login Slider-------------------
     LoginSlider:{
@@ -323,6 +321,13 @@ export default StyleSheet.create({
         justifyContent:"center",
         borderBottomColor:"grey",
         borderBottomWidth:0.5
+    },
+    AccountFont: {
+
+        fontWeight: "bold",
+        color: "black",
+        fontSize: 17,
+
     },
 
 

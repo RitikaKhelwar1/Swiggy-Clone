@@ -3,22 +3,23 @@ import Tabs from './Tabs'
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import { Offers,HomeLocation } from '../components/HomeStackScreenData';
 import { EditDetails,ManageAddress, Favourites, SwiggyMoney, Help ,OneMemberShip} from '../components/AccountStackScreenData';
+import NavStr from './NavigationStrings'
 
 const Stack= createNativeStackNavigator()
 
 function HomeStack() {
   return (
     <Stack.Navigator>
-      <Stack.Screen name="Home" component={Tabs} options={{headerShown: false}}/>
-      <Stack.Screen name="Offers" component={Offers}  />
-      <Stack.Screen name="HomeLocation" component={HomeLocation} options={{headerBackButtonMenuEnabled:false,headerTransparent:true,headerTitle:""}} />
-      <Stack.Screen name="SwiggyOne" component={OneMemberShip} />
-      <Stack.Screen name="EditDetails" component={EditDetails} />
-      <Stack.Screen name="ManageAddress" component={ManageAddress} />
-      <Stack.Screen name="Favourites" component={Favourites} />
-      <Stack.Screen name="OneMemberShip" component={OneMemberShip} />
-      <Stack.Screen name="SwiggyMoney" component={SwiggyMoney} />
-      <Stack.Screen name="Help" component={Help} />
+      <Stack.Screen name={NavStr.HOME} component={Tabs} options={{headerShown: false}}/>
+      <Stack.Screen name={NavStr.OFFERS} component={Offers}  />
+      <Stack.Screen name={NavStr.HOME_LOCATION} component={HomeLocation} options={{headerBackButtonMenuEnabled:false,}} />
+      <Stack.Screen name={NavStr.SWIGGY_ONE} component={OneMemberShip} />
+      <Stack.Screen name={NavStr.EDIT_DETAILS} component={EditDetails} />
+      <Stack.Screen name={NavStr.MANAGE_ADDRESSES} component={ManageAddress} />
+      <Stack.Screen name={NavStr.FAVOURITES} component={Favourites} />
+      <Stack.Screen name={NavStr.ONE_MEMBERSHIP} component={OneMemberShip} />
+      <Stack.Screen name={NavStr.SWIGGY_MONEY} component={SwiggyMoney} />
+      <Stack.Screen name={NavStr.HELP} component={Help} />
     </Stack.Navigator>
   )
 }
