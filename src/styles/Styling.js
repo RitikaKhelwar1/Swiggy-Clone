@@ -84,7 +84,7 @@ export default StyleSheet.create({
     },
     // -------------------------------------
 
-// --------------comppnent 4--------------------
+    // --------------comppnent 4--------------------
     Component3: {
         margin: 10,
         marginTop: 5,
@@ -100,7 +100,7 @@ export default StyleSheet.create({
         borderRadius: 15,
 
     },
-// -------------------------------------------------
+    // -------------------------------------------------
     // ------------------header------------------------>
     header: {
         flexDirection: "row",
@@ -111,31 +111,31 @@ export default StyleSheet.create({
     headerLogo: {
         height: 21,
         width: 20,
-        marginRight:5
+        marginRight: 5
 
     },
-    HomeLocation:{
-        flexDirection:'column',
-        paddingHorizontal:10,
-        paddingBottom:15,
-        flex: 0.75 
+    HomeLocation: {
+        flexDirection: 'column',
+        paddingHorizontal: 10,
+        paddingBottom: 15,
+        flex: 0.75
     },
-    Offers:{ 
-        flex: 0.25 ,
-        paddingHorizontal:5,
-        justifyContent:'center'
+    Offers: {
+        flex: 0.25,
+        paddingHorizontal: 5,
+        justifyContent: 'center'
     },
-    OffersView:{
-        flexDirection:"row",
-        alignItems:'center',
-        alignContent:"center",
-        justifyContent:"flex-end"
+    OffersView: {
+        flexDirection: "row",
+        alignItems: 'center',
+        alignContent: "center",
+        justifyContent: "flex-end"
     },
-    OffersText:{
+    OffersText: {
         fontWeight: "bold",
         color: "grey",
         fontSize: 17,
-        marginRight:5
+        marginRight: 5
     },
 
     //-----------------------------------component 4------------>
@@ -151,35 +151,35 @@ export default StyleSheet.create({
         borderRadius: 70,
 
     },
-    
+
     // -------------------------Instamart------------------------->
-    InstaView1:{
-        flexDirection:"row",
-        borderBottomColor:"purple",
-        borderBottomWidth:2
+    InstaView1: {
+        flexDirection: "row",
+        borderBottomColor: "purple",
+        borderBottomWidth: 2
     },
     InstaView2: {
-        flex:0.5,
-        alignItems:"flex-start",
-        justifyContent:"flex-end"
+        flex: 0.5,
+        alignItems: "flex-start",
+        justifyContent: "flex-end"
     },
-    IText1:{
-        fontWeight:"bold",
-        fontSize:30,
-        color:"purple"
+    IText1: {
+        fontWeight: "bold",
+        fontSize: 30,
+        color: "purple"
     },
-    IText2:{
-        color:"purple",
-        fontSize:10
+    IText2: {
+        color: "purple",
+        fontSize: 10
     },
-    IText3:{
-        color:"purple",
-        fontWeight:"bold"
+    IText3: {
+        color: "purple",
+        fontWeight: "bold"
     },
-    InstaImg:{
-        width:400,
-        borderRadius:15,
-        height:180
+    InstaImg: {
+        width: 400,
+        borderRadius: 15,
+        height: 180
     },
 
     Instamart: {
@@ -196,40 +196,40 @@ export default StyleSheet.create({
         alignSelf: "center",
         alignItems: "stretch"
     },
-    InstaBtn:{
-        marginTop:10,
-        borderRadius:50,
-        marginHorizontal:20,
+    InstaBtn: {
+        marginTop: 10,
+        borderRadius: 50,
+        marginHorizontal: 20,
     },
     // ----------------------------------------------
     // ------------Brands---------------------------
-    BrandContainer:{
-        flex:0.7,
-        flexDirection:"row",
-        justifyContent:"flex-end",
-        borderBottomWidth:1,
-        borderBottomColor:"grey"
+    BrandContainer: {
+        flex: 0.7,
+        flexDirection: "row",
+        justifyContent: "flex-end",
+        borderBottomWidth: 1,
+        borderBottomColor: "grey"
     },
-    CardContainer:{
-        flex:0.5,
-        justifyContent:"flex-start",
-        alignItems:"center"
+    CardContainer: {
+        flex: 0.5,
+        justifyContent: "flex-start",
+        alignItems: "center"
     },
-    CardText:{
-        fontWeight:"bold",
-        textAlign:"center",
-        fontSize:12
+    CardText: {
+        fontWeight: "bold",
+        textAlign: "center",
+        fontSize: 12
     },
-    CardText2:{
-        textAlign:"center",
-        fontSize:8
+    CardText2: {
+        textAlign: "center",
+        fontSize: 8
     },
-    CardImgContainer:{
-        flex:0.7,
-        flexDirection:"row",
-        justifyContent:"flex-end",
-        borderBottomWidth:1,
-        borderBottomColor:"grey"
+    CardImgContainer: {
+        flex: 0.7,
+        flexDirection: "row",
+        justifyContent: "flex-end",
+        borderBottomWidth: 1,
+        borderBottomColor: "grey"
     },
 
     BrandCardImg: {
@@ -265,18 +265,18 @@ export default StyleSheet.create({
         width: 25,
         height: 25
     },
-// ------------------------------------------
+    // ------------------------------------------
 
-   
+
 
     // -----------------Login Slider-------------------
-    LoginSlider:{
-        flex:0.5,
-         backgroundColor: '#fa7743',
-         alignItems: 'center',
-         justifyContent: 'flex-start',
-         padding:50
-     },
+    LoginSlider: {
+        flex: 0.5,
+        backgroundColor: '#fa7743',
+        alignItems: 'center',
+        justifyContent: 'flex-start',
+        padding: 50
+    },
 
     container: {
         flex: 1,
@@ -316,11 +316,11 @@ export default StyleSheet.create({
 
     // --------------My account------------
 
-    MyAccountContainer:{
-        padding:20,
-        justifyContent:"center",
-        borderBottomColor:"grey",
-        borderBottomWidth:0.5
+    MyAccountContainer: {
+        padding: 20,
+        justifyContent: "center",
+        borderBottomColor: "grey",
+        borderBottomWidth: 0.5
     },
     AccountFont: {
 
